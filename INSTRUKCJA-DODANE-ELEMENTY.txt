@@ -1,0 +1,37 @@
+WERSJA DEMONSTRACYJNA — DODANE RZUTY I LOKALIZACJA
+
+CO ZOSTAŁO DODANE
+- Sekcja Rzuty: 3 przykładowe plany (parter, piętro, poddasze).
+- Sekcja Lokalizacja: stylizowana mapa-schemat oraz 4 przykładowe punkty orientacyjne.
+- Sekcja Potencjał: zachowano 3 istniejące koncepcje; obrazy mają proste aliasy plików.
+- Dodano 3 podstrony koncepcji, aby linki z kart nie kończyły się błędem 404.
+- Dodano przewijanie nawigacji do sekcji Rzuty, Lokalizacja, Potencjał i Kontakt.
+
+PLIKI DO PODMIANY
+assets/demo/plan-parter.png
+assets/demo/plan-pietro.png
+assets/demo/plan-poddasze.png
+assets/demo/mapa-lokalizacji.png
+assets/demo/wizja-resort.jpg
+assets/demo/wizja-retreat.jpg
+assets/demo/wizja-boutique.jpg
+
+Aby podmienić grafikę, zachowaj nazwę i rozszerzenie pliku. Przed podmianą zrób kopię zapasową. Grafiki rzutów i mapa są schematyczne i nie przedstawiają zweryfikowanych danych nieruchomości. Wizje są zdjęciami referencyjnymi i nie należy przedstawiać ich jako istniejącego stanu lub zatwierdzonych projektów.
+
+Uwagi:
+- Eksport Framera zawiera tylko część podstron pokoi. Ten pakiet dodaje rysunki i lokalizację na stronie głównej oraz działające strony dla trzech koncepcji; nie uzupełnia jeszcze pozostałych brakujących galerii pomieszczeń.
+- Strona nadal jest statycznym eksportem. Wgrywanie zdjęć przez CMS nie zostało jeszcze skonfigurowane.
+
+AKTUALIZACJA FUNKCJI (11.10.2026)
+
+1. Powiększanie rzutów: kliknij dowolny rzut parteru, piętra lub poddasza. Otworzy się pełnoekranowe powiększenie. Możesz używać przycisków strzałek albo klawiszy ← / →; Escape lub przycisk × zamyka podgląd.
+2. Link Google Maps: w pliku index.html (oraz en/index.html) znajdź id="google-maps-link". Podmień wartość href na właściwy adres udostępnienia pinezki z Google Maps. Tekst przycisku jest niezależny od adresu.
+3. Przykładowy link kieruje obecnie do wyszukiwania „Konstancin-Jeziorna, Polska” i przed publikacją należy go zastąpić dokładną lokalizacją.
+
+
+DODATEK: DZIAŁKA EWIDENCYJNA
+
+Dodano panel informacyjny działki nr 236/13 (identyfikator prezentowany: 020604_1.0002.236/13) pod rzutami trzech kondygnacji. Przycisk otwiera oficjalny Geoportal z parametrem identifyParcel. Karta wizualna jest celowo schematyczna i NIE przedstawia przebiegu granicy działki; dokładną granicę należy sprawdzić w Geoportalu. Powierzchnia podana orientacyjnie (ok. 3 592 m²) wymaga potwierdzenia w aktualnej dokumentacji ewidencyjnej.
+
+Oficjalne informacje o funkcji identifyParcel: https://www.gov.pl/web/gugik/znane-funkcjonalnosci-dostepne-w-nowej-wersji-modulow-geoportalu
+

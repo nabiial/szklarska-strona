@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "parter",
+    "title": "Parter",
+    "title_en": "Ground floor",
+    "title_de": "Erdgeschoss",
+    "subtitle": "Strefa dzienna",
+    "subtitle_en": "Living area",
+    "subtitle_de": "Wohnbereich",
+    "detail": "Salon · kuchnia · gabinet",
+    "detail_en": "Living room · kitchen · study",
+    "detail_de": "Wohnzimmer · Küche · Arbeitszimmer",
+    "code": "RZUT A",
+    "image": "/assets/library/plans/plan-parter.png",
+    "sort_order": 1,
+    "visible": true
+  },
+  {
+    "slug": "pietro",
+    "title": "Piętro",
+    "title_en": "First floor",
+    "title_de": "Obergeschoss",
+    "subtitle": "Strefa prywatna",
+    "subtitle_en": "Private area",
+    "subtitle_de": "Privater Bereich",
+    "detail": "Sypialnie · łazienka · garderoba",
+    "detail_en": "Bedrooms · bathroom · wardrobe",
+    "detail_de": "Schlafzimmer · Bad · Ankleide",
+    "code": "RZUT B",
+    "image": "/assets/library/plans/plan-pietro.png",
+    "sort_order": 2,
+    "visible": true
+  },
+  {
+    "slug": "poddasze",
+    "title": "Poddasze",
+    "title_en": "Attic",
+    "title_de": "Dachgeschoss",
+    "subtitle": "Przestrzeń dodatkowa",
+    "subtitle_en": "Additional space",
+    "subtitle_de": "Zusätzlicher Raum",
+    "detail": "Pokój · studio · schowek",
+    "detail_en": "Room · studio · storage",
+    "detail_de": "Zimmer · Studio · Abstellraum",
+    "code": "RZUT C",
+    "image": "/assets/library/plans/plan-poddasze.png",
+    "sort_order": 3,
+    "visible": true
+  }
+]

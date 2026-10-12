@@ -1,0 +1,1 @@
+try{if(localStorage.getItem("__framer_force_showing_editorbar_since")){const n=document.createElement("link");n.rel="modulepreload";n.href="data:text/javascript,export%20const%20createEditorBar%20%3D%20()%20%3D%3E%20()%20%3D%3E%20null%3B%0Aexport%20default%20%7B%7D%3B";document.head.appendChild(n)}}catch(e){}

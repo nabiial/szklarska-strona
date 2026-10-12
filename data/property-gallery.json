@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Bryła domu i otoczenie",
+    "title_en": "House and surroundings",
+    "title_de": "Haus und Umgebung",
+    "alt": "Zdjęcie demonstracyjne — do podmiany",
+    "image": "/assets/library/property/property-01.jpg",
+    "sort_order": 1,
+    "visible": true
+  },
+  {
+    "title": "Wnętrze nieruchomości",
+    "title_en": "Property interior",
+    "title_de": "Innenraum der Immobilie",
+    "alt": "Zdjęcie demonstracyjne — do podmiany",
+    "image": "/assets/library/property/property-02.jpg",
+    "sort_order": 2,
+    "visible": true
+  }
+]

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" role="img" aria-labelledby="title desc">
+<title id="title">Poddasze — rzut poglądowy</title>
+<desc id="desc">Schematyczny rzut kondygnacji. Układ i wymiary są przykładowe i wymagają podmiany na zweryfikowany plan.</desc>
+<defs>
+  <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="#c9c1b2" stroke-opacity=".055" stroke-width="1"/></pattern>
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse"><path d="M0 0L6 3L0 6Z" fill="#b5a88f"/></marker>
+</defs>
+<rect width="1040" height="600" fill="#151613"/>
+<rect width="1040" height="600" fill="url(#grid)"/>
+<g class="fillroom"><path d="M110 448V235L520 95L930 235V448Z"/><path d="M110 448V235L230 194V448Z"/><path d="M810 194L930 235V448H810Z"/></g>
+<path class="wall" d="M110 448V235L520 95L930 235V448Z"/>
+<path class="inner" d="M260 184V448 M520 95V448 M760 184V448 M260 310H760 M520 310H930"/>
+<path class="fine" d="M110 476H930 M110 465V487 M930 465V487 M74 235V448 M62 235H85 M62 448H85" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<g class="fine"><path d="M125 250L245 210 M795 210L915 250 M135 267L245 230 M795 230L905 267 M150 286L245 251 M795 251L890 286"/></g>
+<g stroke="#b9ad98" stroke-width="2" fill="none"><rect x="548" y="333" width="155" height="93"/><path d="M560 416l131-71 M560 397l113-52 M560 378l77-33 M560 359l41-14"/></g>
+<path class="door" d="M260 350H278 M260 350A32 32 0 0 1 228 318 M505 310H520 M505 310A36 36 0 0 1 469 274 M760 310H778 M760 310A32 32 0 0 0 792 342"/>
+<text x="185" y="355" class="room">SCHOWEK</text><text x="185" y="384" class="area">*</text><text x="390" y="260" class="room">POKÓJ</text><text x="390" y="289" class="area">26,0 m²*</text><text x="640" y="255" class="room">STUDIO</text><text x="640" y="284" class="area">16,7 m²*</text><text x="845" y="355" class="room">ŁAZIENKA</text><text x="845" y="384" class="area">5,1 m²*</text><text x="635" y="326" class="room">HOL</text><text class="dim" x="520" y="50" text-anchor="middle">RZUT POGLĄDOWY · 03</text><text class="note" x="520" y="555" text-anchor="middle">UKŁAD I POWIERZCHNIE WYŁĄCZNIE PRZYKŁADOWE</text><style>
+.room{font:500 23px Arial,sans-serif;fill:#e7e0d3;text-anchor:middle;letter-spacing:.3px}
+.area{font:400 17px Arial,sans-serif;fill:#b9ad98;text-anchor:middle;letter-spacing:1px}
+.dim{font:400 16px Arial,sans-serif;fill:#b9ad98;letter-spacing:2px}
+.note{font:400 15px Arial,sans-serif;fill:#918a7e;letter-spacing:2.2px}
+.wall{stroke:#e5dfd3;stroke-width:7;fill:none}
+.inner{stroke:#b9ad98;stroke-width:3;fill:none}
+.fine{stroke:#918a7e;stroke-width:1.3;fill:none}
+.fillroom{fill:#b9ad98;fill-opacity:.04;stroke:none}
+.door{stroke:#b9ad98;stroke-width:1.8;fill:none}
+</style></svg>

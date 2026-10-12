@@ -1,0 +1,260 @@
+media:
+  - name: site-assets
+    label: Pliki strony
+    input: assets
+    output: /assets
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, avif]
+    rename: safe
+
+content:
+  - name: rooms
+    label: Pomieszczenia i galerie
+    type: file
+    path: data/rooms.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: Adres / identyfikator URL
+        type: string
+        required: true
+        description: Krótka nazwa bez spacji, np. salon lub sypialnia-1. Link do galerii generuje się automatycznie.
+      - name: floor
+        label: Piętro
+        type: select
+        required: true
+        options:
+          values:
+            - name: parter
+              label: Parter
+            - name: pietro
+              label: Piętro
+            - name: poddasze
+              label: Poddasze
+      - name: title
+        label: Nazwa pomieszczenia (PL)
+        type: string
+        required: true
+      - name: title_en
+        label: Room name (EN)
+        type: string
+      - name: title_de
+        label: Raumname (DE)
+        type: string
+      - name: description
+        label: Opis (PL)
+        type: text
+      - name: description_en
+        label: Description (EN)
+        type: text
+      - name: description_de
+        label: Beschreibung (DE)
+        type: text
+      - name: cover
+        label: Zdjęcie główne kafelka
+        type: image
+        required: true
+        options:
+          media: site-assets
+          path: assets/library/rooms
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: gallery
+        label: Zdjęcia w galerii pomieszczenia
+        type: image
+        description: Możesz zaznaczyć wiele fotografii. Zdjęcie główne jest wyświetlane osobno; duplikaty nie powielają się w galerii.
+        options:
+          media: site-assets
+          path: assets/library/rooms
+          multiple:
+            max: 300
+          unique: true
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: sort_order
+        label: Kolejność na stronie
+        type: number
+      - name: visible
+        label: Pokaż na stronie
+        type: boolean
+
+  - name: property-gallery
+    label: Zdjęcia domu i otoczenia
+    type: file
+    path: data/property-gallery.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Podpis (PL)
+        type: string
+      - name: title_en
+        label: Caption (EN)
+        type: string
+      - name: title_de
+        label: Bildtitel (DE)
+        type: string
+      - name: alt
+        label: Tekst alternatywny zdjęcia
+        type: string
+      - name: image
+        label: Zdjęcie
+        type: image
+        required: true
+        options:
+          media: site-assets
+          path: assets/library/property
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: sort_order
+        label: Kolejność
+        type: number
+      - name: visible
+        label: Pokaż na stronie
+        type: boolean
+
+  - name: floor-plans
+    label: Rzuty kondygnacji
+    type: file
+    path: data/floor-plans.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: Identyfikator
+        type: string
+      - name: title
+        label: Kondygnacja (PL)
+        type: string
+      - name: title_en
+        label: Floor (EN)
+        type: string
+      - name: title_de
+        label: Etage (DE)
+        type: string
+      - name: subtitle
+        label: Podtytuł (PL)
+        type: string
+      - name: subtitle_en
+        label: Subtitle (EN)
+        type: string
+      - name: subtitle_de
+        label: Untertitel (DE)
+        type: string
+      - name: detail
+        label: Krótki opis (PL)
+        type: string
+      - name: detail_en
+        label: Short description (EN)
+        type: string
+      - name: detail_de
+        label: Kurzbeschreibung (DE)
+        type: string
+      - name: code
+        label: Oznaczenie rzutu
+        type: string
+      - name: image
+        label: Grafika rzutu
+        type: image
+        options:
+          media: site-assets
+          path: assets/library/plans
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: sort_order
+        label: Kolejność
+        type: number
+      - name: visible
+        label: Pokaż na stronie
+        type: boolean
+
+  - name: concepts
+    label: Wizje — Potencjał
+    type: file
+    path: data/concepts.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: Identyfikator URL
+        type: string
+        required: true
+      - name: number
+        label: Numer koncepcji
+        type: string
+      - name: title
+        label: Nazwa (PL)
+        type: string
+      - name: title_en
+        label: Name (EN)
+        type: string
+      - name: title_de
+        label: Name (DE)
+        type: string
+      - name: description
+        label: Opis (PL)
+        type: text
+      - name: description_en
+        label: Description (EN)
+        type: text
+      - name: description_de
+        label: Beschreibung (DE)
+        type: text
+      - name: cover
+        label: Główna wizualizacja
+        type: image
+        options:
+          media: site-assets
+          path: assets/library/concepts
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: gallery
+        label: Dodatkowe wizualizacje
+        type: image
+        description: Dodaj kolejne wizualizacje, moodboardy lub rzuty koncepcyjne.
+        options:
+          media: site-assets
+          path: assets/library/concepts
+          multiple:
+            max: 300
+          unique: true
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: disclaimer
+        label: Zastrzeżenie koncepcyjne
+        type: text
+      - name: visible
+        label: Pokaż na stronie
+        type: boolean
+
+  - name: site-settings
+    label: Ustawienia nieruchomości
+    type: file
+    path: data/site-settings.json
+    format: json
+    fields:
+      - name: property_name
+        label: Nazwa nieruchomości
+        type: string
+      - name: property_name_en
+        label: Property name (EN)
+        type: string
+      - name: property_name_de
+        label: Objektname (DE)
+        type: string
+      - name: address
+        label: Adres (PL)
+        type: string
+      - name: address_en
+        label: Address (EN)
+        type: string
+      - name: address_de
+        label: Adresse (DE)
+        type: string
+      - name: google_maps_url
+        label: Link Google Maps
+        type: string
+      - name: geoportal_url
+        label: Link do Geoportalu
+        type: string
+      - name: parcel_id
+        label: Identyfikator działki
+        type: string
+      - name: parcel_area
+        label: Opis powierzchni działki
+        type: string

@@ -1,0 +1,43 @@
+ROZDZIELONE CSS I JAVASCRIPT — SZKLARSKA STRONA
+
+Co zostało zmienione:
+- CSS z tagów <style> został przeniesiony do osobnego pliku styles.css w katalogu każdej strony.
+- Wykonywalny JavaScript z tagów <script> został przeniesiony do plików w katalogu js/ obok danej strony.
+- Kolejność skryptów w HTML została zachowana; skrypty są ładowane synchronicznie tak jak wcześniej.
+- Odwołania do plików są względne, więc struktura powinna działać również po rozpakowaniu folderu.
+
+Celowo pozostawione w HTML:
+- Puste znaczniki <style data-framer-...> bez CSS. Framer runtime szuka niektórych z nich jako znaczników informacyjnych.
+- <script type="framer/handover" id="__framer__handoverData"> zawierający dane JSON. To nie jest wykonywalny JavaScript; runtime Framera czyta jego zawartość bezpośrednio z DOM. Przeniesienie tego payloadu wymagałoby zmiany samego runtime'u i mogłoby zepsuć stronę.
+- Pusty znacznik dotyczący preferencji animacji.
+
+Najważniejsze pliki:
+- index.html — strona główna PL
+- styles.css — style strony głównej PL
+- js/ — skrypty strony głównej PL
+- en/index.html i en/styles.css — angielska strona główna
+- rooms/basen/ — istniejąca strona basenu i sauny
+- koncepcje/*/ — strony koncepcji
+
+Jak edytować:
+- Wygląd: edytuj odpowiedni styles.css.
+- Działanie interakcji: edytuj pliki js/.
+- Nie usuwaj pliku js/02-local-resource-map.js bez zastąpienia jego funkcji — mapuje lokalne pliki wyeksportowane z Framera.
+- Zachowaj strukturę folderów i względne ścieżki.
+
+Po zmianach otwórz index.html w przeglądarce i sprawdź: menu, kliknięcia rzutów, przycisk Google Maps oraz podstrony koncepcji. Testowanie przez lokalny serwer (np. VS Code Live Server) jest pewniejsze niż uruchamianie przez file://.
+
+DODATKOWO — BIBLIOTEKA ZDJĘĆ / CMS:
+- `.pages.yml` — konfiguracja edytora Pages CMS dla pomieszczeń, galerii, rzutów, koncepcji i ustawień.
+- `data/rooms.json` — 16 pomieszczeń; każdy ma pole zdjęcia głównego i wielozdjęciową galerię.
+- `data/property-gallery.json` — edytowalna galeria domu i otoczenia.
+- `data/floor-plans.json` — trzy rzuty kondygnacji.
+- `data/concepts.json` — wizje z możliwością dodania wielu dodatkowych wizualizacji.
+- `data/site-settings.json` — adres, link Google Maps oraz Geoportal.
+- `js/13-library-sync.js` — aktualizuje główną stronę na podstawie plików JSON.
+- `rooms/detail.html` i `js/14-room-gallery.js` — wspólny szablon szczegółowej galerii dla wszystkich pomieszczeń.
+- `js/15-concept-detail.js` — wczytuje informacje i dodatkowe wizualizacje na stronach koncepcji.
+- `library.css` — style kart i wspólnych galerii.
+
+Konfiguracja CMS i instrukcja wdrożenia znajduje się w `README-BIBLIOTEKA-ZDJEC.md`.
+Uwaga: po otwarciu plików bezpośrednio przez `file://` pobieranie JSON może być blokowane przez przeglądarkę. Do testów użyj lokalnego serwera HTTP; opis znajduje się w README.

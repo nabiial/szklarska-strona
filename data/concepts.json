@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "resort",
+    "number": "01",
+    "title": "RESORT",
+    "title_en": "RESORT",
+    "title_de": "RESORT",
+    "description": "Kameralny resort butikowy, w którym architektura, natura i indywidualna obsługa tworzą spójną przestrzeń wypoczynku.",
+    "description_en": "A boutique resort concept combining architecture, nature and individual hospitality.",
+    "description_de": "Ein Boutique-Resort-Konzept, das Architektur, Natur und individuellen Service verbindet.",
+    "cover": "/assets/library/concepts/wizja-resort.jpg",
+    "gallery": [],
+    "visible": true,
+    "disclaimer": "WIZUALIZACJA KONCEPCYJNA. Materiał poglądowy, nie stanowi projektu budowlanego ani potwierdzenia możliwości formalnych."
+  },
+  {
+    "slug": "private-retreat",
+    "number": "02",
+    "title": "PRIVATE RETREAT",
+    "title_en": "PRIVATE RETREAT",
+    "title_de": "PRIVATE RETREAT",
+    "description": "Prywatna enklawa wellness i regeneracji: miejsce na kameralne pobyty, wyciszenie i kontakt z naturą.",
+    "description_en": "A private wellness retreat for quiet stays, restoration and connection with nature.",
+    "description_de": "Ein privater Wellness-Rückzugsort für Ruhe, Erholung und Naturverbundenheit.",
+    "cover": "/assets/library/concepts/wizja-retreat.jpg",
+    "gallery": [],
+    "visible": true,
+    "disclaimer": "WIZUALIZACJA KONCEPCYJNA. Materiał poglądowy, nie stanowi projektu budowlanego ani potwierdzenia możliwości formalnych."
+  },
+  {
+    "slug": "boutique-hospitality",
+    "number": "03",
+    "title": "BOUTIQUE HOSPITALITY",
+    "title_en": "BOUTIQUE HOSPITALITY",
+    "title_de": "BOUTIQUE HOSPITALITY",
+    "description": "Autorski koncept zakwaterowania premium, łączący intymną skalę rezydencji z jakością butikowej gościnności.",
+    "description_en": "A premium accommodation concept combining the intimacy of a residence with boutique hospitality.",
+    "description_de": "Ein Premium-Unterkunftskonzept, das die Intimität einer Residenz mit Boutique-Gastlichkeit verbindet.",
+    "cover": "/assets/library/concepts/wizja-boutique.jpg",
+    "gallery": [],
+    "visible": true,
+    "disclaimer": "WIZUALIZACJA KONCEPCYJNA. Materiał poglądowy, nie stanowi projektu budowlanego ani potwierdzenia możliwości formalnych."
+  }
+]
