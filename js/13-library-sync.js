@@ -9,6 +9,7 @@
   }[lang];
   var dataUrl = '/data/';
   function fetchJson(name) { return fetch(dataUrl + name, { cache: 'no-store' }).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status+' for '+name); return r.json(); }); }
+  function routeSlug(slug) { var s=String(slug||'').toLowerCase().replace(/ł/g,'l'); try { s=s.normalize('NFKD').replace(/[\u0300-\u036f]/g,''); } catch(e) {} return s.replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/-+/g,'-'); }
   function asset(path) { if (!path) return ''; if (/^(https?:|data:|blob:)/i.test(path)) return path; return path.charAt(0)==='/' ? path : '/'+path.replace(/^\.\//,''); }
   function uniquePhotos(room) { var list=[]; [room.cover].concat(Array.isArray(room.gallery)?room.gallery:[]).forEach(function(p){if(p && list.indexOf(p)===-1) list.push(p);}); return list; }
   function photoLabel(n) { return t.photos(n); }
@@ -27,7 +28,7 @@
       container.classList.add('cms-room-grid');
       container.setAttribute('data-cms-library','rooms');
       container.innerHTML=items.map(function(r){
-        var href='rooms/detail.html?slug='+encodeURIComponent(r.slug)+'&lang='+lang;
+        var href='/rooms/'+routeSlug(r.slug)+'/?lang='+encodeURIComponent(lang);
         var cover=asset(r.cover || (r.gallery||[])[0]);
         var count=uniquePhotos(r).length;
         return '<a class="cms-room-card" href="'+escapeHtml(href)+'" data-room-slug="'+escapeHtml(r.slug)+'">'+
