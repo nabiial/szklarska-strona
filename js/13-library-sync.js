@@ -11,7 +11,7 @@
   function fetchJson(name) { return fetch(dataUrl + name, { cache: 'no-store' }).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status+' for '+name); return r.json(); }); }
   function routeSlug(slug) { var s=String(slug||'').toLowerCase().replace(/ł/g,'l'); try { s=s.normalize('NFKD').replace(/[\u0300-\u036f]/g,''); } catch(e) {} return s.replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/-+/g,'-'); }
   function asset(path) { if (!path) return ''; if (/^(https?:|data:|blob:)/i.test(path)) return path; return path.charAt(0)==='/' ? path : '/'+path.replace(/^\.\//,''); }
-  function uniquePhotos(room) { var list=[]; [room.cover].concat(Array.isArray(room.gallery)?room.gallery:[]).forEach(function(p){if(p && list.indexOf(p)===-1) list.push(p);}); return list; }
+  function uniquePhotos(room) { var list=[]; [room.cover].concat(Array.isArray(room.gallery)?room.gallery:[], Array.isArray(room.closeup_gallery)?room.closeup_gallery:[]).forEach(function(p){if(p && list.indexOf(p)===-1) list.push(p);}); return list; }
   function photoLabel(n) { return t.photos(n); }
   function escapeHtml(v) { return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
   function roomTitle(r) { return r[lang==='en'?'title_en':lang==='de'?'title_de':'title'] || r.title || r.slug; }

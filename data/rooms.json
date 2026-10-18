@@ -10,7 +10,7 @@
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
     "cover": "/assets/library/rooms/basen-cover.jpg",
     "gallery": [
-      "/assets/library/rooms/6e8a5989.webp"
+      "/assets/library/rooms/6e8a5989-1.webp"
     ],
     "sort_order": 1,
     "visible": true
@@ -24,9 +24,31 @@
     "description": "Pomieszczenie do dokładnego zaprezentowania. Dodaj opis i pełny zestaw zdjęć.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/living-room-cover.jpg",
+    "cover": "/assets/library/rooms/living-room/living-room-cover.webp",
     "sort_order": 2,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/living-room/6E8A6010.webp",
+      "/assets/library/rooms/living-room/6E8A6012.webp",
+      "/assets/library/rooms/living-room/6E8A6013.webp",
+      "/assets/library/rooms/living-room/6E8A6014.webp",
+      "/assets/library/rooms/living-room/6E8A6016.webp",
+      "/assets/library/rooms/living-room/6E8A6018.webp",
+      "/assets/library/rooms/living-room/6E8A6021.webp",
+      "/assets/library/rooms/living-room/6E8A6024.webp",
+      "/assets/library/rooms/living-room/6E8A6028.webp",
+      "/assets/library/rooms/living-room/6E8A6034.webp",
+      "/assets/library/rooms/living-room/6E8A6036.webp",
+      "/assets/library/rooms/living-room/6E8A6038.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170238_20260927170236_1790612275901_photo.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170238_20260927170238_1790612275643_photo.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170252_20260927170250_1790612275374_photo.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170256_20260927170253_1790612274725_photo.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170256_20260927170254_1790612274949_photo.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170304_20260927170301_1790612275137_photo.webp",
+      "/assets/library/rooms/living-room/dji_mimo_20260927_170312_20260927170308_1790612274279_photo.webp"
+    ],
+    "closeup_gallery": []
   },
   {
     "slug": "kitchen-dining",
@@ -63,7 +85,7 @@
     "description": "Pomieszczenie techniczne. Warto dodać zdjęcia instalacji i wyposażenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/kotłownia-cover.jpg",
+    "cover": "/assets/library/rooms/kotlownia-cover.jpg",
     "sort_order": 5,
     "visible": true
   },
@@ -141,7 +163,7 @@
     "description": "Garaż. Dodaj zdjęcia wnętrza, wjazdu i wyposażenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/garaż-cover.jpg",
+    "cover": "/assets/library/rooms/garaz-cover.jpg",
     "sort_order": 11,
     "visible": true
   },
@@ -193,7 +215,7 @@
     "description": "Sypialnia z łazienką. Dodaj pełny zestaw zdjęć oraz opis układu pomieszczeń.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/sypialnia-łazienka-cover.jpg",
+    "cover": "/assets/library/rooms/sypialnia-lazienka-cover.jpg",
     "sort_order": 15,
     "visible": true
   },
@@ -206,7 +228,7 @@
     "description": "Sypialnia z łazienką. Dodaj pełny zestaw zdjęć oraz opis układu pomieszczeń.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/sypialnia-łazienka-2-cover.jpg",
+    "cover": "/assets/library/rooms/sypialnia-lazienka-2-cover.jpg",
     "sort_order": 16,
     "visible": true
   }

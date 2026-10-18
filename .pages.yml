@@ -62,7 +62,18 @@ content:
       - name: gallery
         label: Zdjęcia w galerii pomieszczenia
         type: image
-        description: Możesz zaznaczyć wiele fotografii. Zdjęcie główne jest wyświetlane osobno; duplikaty nie powielają się w galerii.
+        description: Galerie są generowane z folderu assets/library/rooms/<slug>/ podczas wdrożenia. Do masowego dodawania zdjęć użyj GitHub Desktop; ręczne zmiany tego pola zostaną nadpisane przez synchronizację folderów.
+        options:
+          media: site-assets
+          path: assets/library/rooms
+          multiple:
+            max: 300
+          unique: true
+          extensions: [jpg, jpeg, png, webp, avif]
+      - name: closeup_gallery
+        label: Detale i zbliżenia
+        type: image
+        description: Galerie zbliżeń są generowane z folderu assets/library/rooms/<slug>/closeup/. Do masowego dodawania zdjęć użyj GitHub Desktop; ręczne zmiany tego pola zostaną nadpisane przez synchronizację folderów.
         options:
           media: site-assets
           path: assets/library/rooms
