@@ -6,18 +6,68 @@
   const ui = {
     pl: {
       previous: "Poprzednie zdjęcie", next: "Następne zdjęcie",
-      close: "Zamknij zdjęcie", placeholder: "Miejsce na zdjęcie", photo: "Zdjęcie"
+      close: "Zamknij zdjęcie", placeholder: "Miejsce na zdjęcie", photo: "Zdjęcie",
+      formNotConfigured: "Formularz jest przygotowany, ale wysyłka nie została jeszcze podłączona. Wiadomość nie została wysłana.",
+      formSending: "Wysyłanie wiadomości…", formSuccess: "Dziękujemy. Twoja wiadomość została wysłana.",
+      formError: "Nie udało się wysłać wiadomości. Spróbuj ponownie później."
     },
     en: {
       previous: "Previous photo", next: "Next photo",
-      close: "Close photo", placeholder: "Photo placeholder", photo: "Photo"
+      close: "Close photo", placeholder: "Photo placeholder", photo: "Photo",
+      formNotConfigured: "The form is ready, but email delivery has not been connected yet. Your message has not been sent.",
+      formSending: "Sending your message…", formSuccess: "Thank you. Your message has been sent.",
+      formError: "Your message could not be sent. Please try again later."
     },
     de: {
       previous: "Vorheriges Foto", next: "Nächstes Foto",
-      close: "Foto schließen", placeholder: "Platzhalter für Foto", photo: "Foto"
+      close: "Foto schließen", placeholder: "Platzhalter für Foto", photo: "Foto",
+      formNotConfigured: "Das Formular ist vorbereitet, aber der E-Mail-Versand ist noch nicht eingerichtet. Ihre Nachricht wurde nicht gesendet.",
+      formSending: "Nachricht wird gesendet…", formSuccess: "Vielen Dank. Ihre Nachricht wurde gesendet.",
+      formError: "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
     }
   }[lang];
 
+
+
+  function initContactForm() {
+    const form = document.querySelector("[data-contact-form]");
+    if (!form) return;
+    const status = form.querySelector("[data-contact-status]");
+    const submit = form.querySelector('button[type="submit"]');
+    if (!status || !submit) return;
+    const endpoint = (form.getAttribute("data-endpoint") || "").trim();
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      if (!endpoint) {
+        status.textContent = ui.formNotConfigured;
+        status.hidden = false;
+        return;
+      }
+      submit.disabled = true;
+      status.textContent = ui.formSending;
+      status.hidden = false;
+      try {
+        const payload = Object.fromEntries(new FormData(form).entries());
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error("Contact form request failed: " + response.status);
+        form.reset();
+        status.textContent = ui.formSuccess;
+      } catch (error) {
+        console.error("[Gorna 22] Contact form submission failed.", error);
+        status.textContent = ui.formError;
+      } finally {
+        submit.disabled = false;
+      }
+    });
+  }
+
+  initContactForm();
 
   function initLanguageSwitcher() {
     const root = document.querySelector("[data-language-switch]");
