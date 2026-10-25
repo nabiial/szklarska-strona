@@ -1,6 +1,6 @@
 {
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=G%C3%B3rna+22A%2C+Szklarska+Por%C4%99ba",
-  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyAddress=Szklarska%20Por%C4%99ba%2C%20G%C3%B3rna%2022A",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=G%C3%B3rna+22%2C+Szklarska+Por%C4%99ba",
+  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyAddress=Szklarska%20Por%C4%99ba%2C%20G%C3%B3rna%2022",
   "geoportalImage": "/assets/library/property/geoportal-parcel.webp",
   "residenceGallery": [
     {
