@@ -8,12 +8,36 @@
     "description": "Strefa basenu i sauny. Opis oraz docelowe fotografie można uzupełnić w panelu.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/basen-cover.jpg",
+    "cover": "/assets/library/rooms/basen/cover.webp",
     "gallery": [
-      "/assets/library/rooms/6e8a5989-1.webp"
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165750_20260927165748_1790612279824_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165754_20260927165749_1790612279621_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165754_20260927165752_1790612279442_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165754_20260927165754_1790612279239_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165800_20260927165757_1790612279018_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165916_20260927165912_1790612278827_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165924_20260927165922_1790612278643_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165928_20260927165925_1790612278445_photo.webp",
+      "/assets/library/rooms/basen/normalne/dji_mimo_20260927_165932_20260927165930_1790612278255_photo.webp"
     ],
     "sort_order": 1,
-    "visible": true
+    "visible": true,
+    "closeup_gallery": [
+      "/assets/library/rooms/basen/closeup/6E8A5973.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5975.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5978.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5979.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5981.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5986.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5988.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5989.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5991.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5994.webp",
+      "/assets/library/rooms/basen/closeup/6E8A5995.webp",
+      "/assets/library/rooms/basen/closeup/6E8A6345.webp",
+      "/assets/library/rooms/basen/closeup/6E8A6346.webp",
+      "/assets/library/rooms/basen/closeup/6E8A6353.webp"
+    ]
   },
   {
     "slug": "living-room",
@@ -24,31 +48,32 @@
     "description": "Pomieszczenie do dokładnego zaprezentowania. Dodaj opis i pełny zestaw zdjęć.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/living-room/living-room-cover.webp",
+    "cover": "/assets/library/rooms/living-room/cover.webp",
     "sort_order": 2,
     "visible": true,
     "gallery": [
-      "/assets/library/rooms/living-room/6E8A6010.webp",
-      "/assets/library/rooms/living-room/6E8A6012.webp",
-      "/assets/library/rooms/living-room/6E8A6013.webp",
-      "/assets/library/rooms/living-room/6E8A6014.webp",
-      "/assets/library/rooms/living-room/6E8A6016.webp",
-      "/assets/library/rooms/living-room/6E8A6018.webp",
-      "/assets/library/rooms/living-room/6E8A6021.webp",
-      "/assets/library/rooms/living-room/6E8A6024.webp",
-      "/assets/library/rooms/living-room/6E8A6028.webp",
-      "/assets/library/rooms/living-room/6E8A6034.webp",
-      "/assets/library/rooms/living-room/6E8A6036.webp",
-      "/assets/library/rooms/living-room/6E8A6038.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170238_20260927170236_1790612275901_photo.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170238_20260927170238_1790612275643_photo.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170252_20260927170250_1790612275374_photo.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170256_20260927170253_1790612274725_photo.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170256_20260927170254_1790612274949_photo.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170304_20260927170301_1790612275137_photo.webp",
-      "/assets/library/rooms/living-room/dji_mimo_20260927_170312_20260927170308_1790612274279_photo.webp"
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170238_20260927170236_1790612275901_photo.webp",
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170238_20260927170238_1790612275643_photo.webp",
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170252_20260927170250_1790612275374_photo.webp",
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170256_20260927170253_1790612274725_photo.webp",
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170256_20260927170254_1790612274949_photo.webp",
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170304_20260927170301_1790612275137_photo.webp",
+      "/assets/library/rooms/living-room/normalne/dji_mimo_20260927_170312_20260927170308_1790612274279_photo.webp"
     ],
-    "closeup_gallery": []
+    "closeup_gallery": [
+      "/assets/library/rooms/living-room/closeup/6E8A6010.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6012.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6013.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6014.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6016.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6018.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6021.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6024.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6028.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6034.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6036.webp",
+      "/assets/library/rooms/living-room/closeup/6E8A6038.webp"
+    ]
   },
   {
     "slug": "kitchen-dining",
@@ -59,9 +84,25 @@
     "description": "Łazienka do dokładnego zaprezentowania. Dodaj opis i pełny zestaw zdjęć.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/kitchen-dining-cover.jpg",
+    "cover": "/assets/library/rooms/kitchen-dining/cover.webp",
     "sort_order": 3,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/kitchen-dining/normalne/dji_mimo_20260927_170854_20260927170851_1790612273499_photo.webp",
+      "/assets/library/rooms/kitchen-dining/normalne/dji_mimo_20260927_170858_20260927170853_1790612273347_photo.webp",
+      "/assets/library/rooms/kitchen-dining/normalne/dji_mimo_20260927_170858_20260927170854_1790612273187_photo.webp",
+      "/assets/library/rooms/kitchen-dining/normalne/dji_mimo_20260927_170858_20260927170856_1790612272998_photo.webp",
+      "/assets/library/rooms/kitchen-dining/normalne/dji_mimo_20260927_170904_20260927170901_1790612272812_photo.webp",
+      "/assets/library/rooms/kitchen-dining/normalne/dji_mimo_20260927_170906_20260927170902_1790612272656_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/kitchen-dining/closeup/6E8A6040.webp",
+      "/assets/library/rooms/kitchen-dining/closeup/6E8A6043.webp",
+      "/assets/library/rooms/kitchen-dining/closeup/6E8A6048.webp",
+      "/assets/library/rooms/kitchen-dining/closeup/6E8A6049.webp",
+      "/assets/library/rooms/kitchen-dining/closeup/6E8A6053.webp",
+      "/assets/library/rooms/kitchen-dining/closeup/6E8A6054.webp"
+    ]
   },
   {
     "slug": "billard",
@@ -72,9 +113,21 @@
     "description": "Pomieszczenie rekreacyjne. Dodaj opis oraz zdjęcia detali i wyposażenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/billard-cover.jpg",
+    "cover": "/assets/library/rooms/billard/cover.webp",
     "sort_order": 4,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/billard/normalne/dji_mimo_20260927_165948_20260927165945_1790612278064_photo.webp",
+      "/assets/library/rooms/billard/normalne/dji_mimo_20260927_165950_20260927165946_1790612277861_photo.webp",
+      "/assets/library/rooms/billard/normalne/dji_mimo_20260927_170112_20260927170109_1790612277663_photo.webp",
+      "/assets/library/rooms/billard/normalne/dji_mimo_20260927_170116_20260927170110_1790612277425_photo.webp",
+      "/assets/library/rooms/billard/normalne/dji_mimo_20260927_170116_20260927170114_1790612277170_photo.webp",
+      "/assets/library/rooms/billard/normalne/dji_mimo_20260927_170116_20260927170115_1790612276870_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/billard/closeup/6E8A5998.webp",
+      "/assets/library/rooms/billard/closeup/6E8A6004.webp"
+    ]
   },
   {
     "slug": "kotłownia",
@@ -85,9 +138,37 @@
     "description": "Pomieszczenie techniczne. Warto dodać zdjęcia instalacji i wyposażenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/kotlownia-cover.jpg",
+    "cover": "/assets/library/rooms/kotlownia/cover.webp",
     "sort_order": 5,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/kotlownia/normalne/dji_mimo_20260927_170924_20260927170921_1790612272506_photo.webp",
+      "/assets/library/rooms/kotlownia/normalne/dji_mimo_20260927_170928_20260927170925_1790612272323_photo.webp",
+      "/assets/library/rooms/kotlownia/normalne/dji_mimo_20260927_170932_20260927170928_1790612271927_photo.webp",
+      "/assets/library/rooms/kotlownia/normalne/dji_mimo_20260927_170932_20260927170931_1790612271749_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/kotlownia/closeup/6E8A6056.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6071.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6317.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6319.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6324.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6326.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6327.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6328.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6329.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6330.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6332.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6334.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6335.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6337.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6338.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6339.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6340.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6341.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6342.webp",
+      "/assets/library/rooms/kotlownia/closeup/6E8A6344.webp"
+    ]
   },
   {
     "slug": "pomieszczenie-gospodarcze",
@@ -98,9 +179,28 @@
     "description": "Pomieszczenie gospodarcze. Dodaj zdjęcia pokazujące funkcję i wyposażenie.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/pomieszczenie-gospodarcze-cover.jpg",
+    "cover": "/assets/library/rooms/pomieszczenie-gospodarcze/cover.webp",
     "sort_order": 6,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165622_20260927165620_1790612281715_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165626_20260927165624_1790612281495_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165630_20260927165626_1790612280890_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165730_20260927165726_1790612281328_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165732_20260927165727_1790612281084_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165734_20260927165728_1790612280699_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165738_20260927165736_1790612280222_photo.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/normalne/dji_mimo_20260927_165742_20260927165737_1790612280020_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5896.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5901.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5906.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5907.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5910.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5911.webp",
+      "/assets/library/rooms/pomieszczenie-gospodarcze/closeup/6E8A5914.webp"
+    ]
   },
   {
     "slug": "primary-suite",
@@ -111,9 +211,40 @@
     "description": "Sypialnia główna. Dodaj opis, powierzchnię i fotografie z różnych perspektyw.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/primary-suite-cover.jpg",
+    "cover": "/assets/library/rooms/primary-suite/cover.webp",
     "sort_order": 7,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164444_20260927164441_1790612288348_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164452_20260927164449_1790612288163_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164502_20260927164459_1790612287975_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164512_20260927164510_1790612287410_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164516_20260927164511_1790612287613_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164526_20260927164523_1790612287803_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164528_20260927164526_1790612287229_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164532_20260927164530_1790612287041_photo.webp",
+      "/assets/library/rooms/primary-suite/normalne/dji_mimo_20260927_164536_20260927164531_1790612286846_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/primary-suite/closeup/6E8A5719.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5722.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5728.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5731.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5734.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5735.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5742.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5747.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5751.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5753.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5755.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5757.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5759.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5760.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5766.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5768.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5773.webp",
+      "/assets/library/rooms/primary-suite/closeup/6E8A5775.webp"
+    ]
   },
   {
     "slug": "guest-bedroom",
@@ -124,9 +255,29 @@
     "description": "Przestrzeń do pracy. Dodaj opis oraz zdjęcia pomieszczenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/guest-bedroom-cover.jpg",
+    "cover": "/assets/library/rooms/guest-bedroom/cover.webp",
     "sort_order": 8,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164754_20260927164752_1790612285681_photo.webp",
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164758_20260927164753_1790612285901_photo.webp",
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164804_20260927164801_1790612286091_photo.webp",
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164806_20260927164803_1790612285474_photo.webp",
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164808_20260927164804_1790612285260_photo.webp",
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164812_20260927164809_1790612285013_photo.webp",
+      "/assets/library/rooms/guest-bedroom/normalne/dji_mimo_20260927_164818_20260927164815_1790612284828_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5777.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5778.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5781.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5782.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5783.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5784.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5787.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5792.webp",
+      "/assets/library/rooms/guest-bedroom/closeup/6E8A5793.webp"
+    ]
   },
   {
     "slug": "salon",
@@ -137,9 +288,48 @@
     "description": "Przestrzeń dzienna z miejscem do wypoczynku i jedzenia. Dodaj pełną galerię.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/salon-cover.jpg",
+    "cover": "/assets/library/rooms/salon/cover.webp",
     "sort_order": 9,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165024_20260927165022_1790612284626_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165030_20260927165027_1790612284436_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165032_20260927165028_1790612284205_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165142_20260927165139_1790612283396_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165148_20260927165146_1790612283591_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165152_20260927165147_1790612282998_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_165152_20260927165149_1790612282792_photo-Prompt.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_171346_20260927171342_1790612271561_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_171348_20260927171344_1790612271353_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_171348_20260927171345_1790612271131_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_171354_20260927171352_1790612270882_photo.webp",
+      "/assets/library/rooms/salon/normalne/dji_mimo_20260927_171358_20260927171353_1790612270685_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/salon/closeup/6E8A5797.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5800.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5803.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5806.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5808.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5809.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5815.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5819.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5822.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5824.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5826.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5834.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5836.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5840.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5844.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5847.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5850.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5855.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5858.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5860.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5865.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5867.webp",
+      "/assets/library/rooms/salon/closeup/6E8A5871.webp"
+    ]
   },
   {
     "slug": "kuchnia",
@@ -150,9 +340,25 @@
     "description": "Kuchnia. Dodaj opis zabudowy, wyposażenia i dodatkowe fotografie.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/kuchnia-cover.jpg",
+    "cover": "/assets/library/rooms/kuchnia/cover.webp",
     "sort_order": 10,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/kuchnia/normalne/dji_mimo_20260927_165040_20260927165037_1790612283996_photo.webp",
+      "/assets/library/rooms/kuchnia/normalne/dji_mimo_20260927_165044_20260927165042_1790612283773_photo.webp",
+      "/assets/library/rooms/kuchnia/normalne/dji_mimo_20260927_165048_20260927165044_1790612283193_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/kuchnia/closeup/6E8A5872.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5873.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5875.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5876.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5878.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5881.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5883.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5884.webp",
+      "/assets/library/rooms/kuchnia/closeup/6E8A5886.webp"
+    ]
   },
   {
     "slug": "garaż",
@@ -163,9 +369,15 @@
     "description": "Garaż. Dodaj zdjęcia wnętrza, wjazdu i wyposażenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/garaz-cover.jpg",
+    "cover": "/assets/library/rooms/garaz/cover.webp",
     "sort_order": 11,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/garaz/normalne/6E8A6084.webp",
+      "/assets/library/rooms/garaz/normalne/6E8A6360.webp",
+      "/assets/library/rooms/garaz/normalne/6E8A6366.webp"
+    ],
+    "closeup_gallery": []
   },
   {
     "slug": "toaleta",
@@ -176,9 +388,19 @@
     "description": "Toaleta. Dodaj zdjęcia i krótki opis wykończenia.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/toaleta-cover.jpg",
+    "cover": "/assets/library/rooms/toaleta/cover.webp",
     "sort_order": 12,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/toaleta/normalne/dji_mimo_20260927_165440_20260927165437_1790612282554_photo.webp",
+      "/assets/library/rooms/toaleta/normalne/dji_mimo_20260927_165442_20260927165441_1790612282062_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/toaleta/closeup/6E8A5709.webp",
+      "/assets/library/rooms/toaleta/closeup/6E8A5710.webp",
+      "/assets/library/rooms/toaleta/closeup/6E8A5713.webp",
+      "/assets/library/rooms/toaleta/closeup/6E8A5714.webp"
+    ]
   },
   {
     "slug": "attic-studio",
@@ -189,9 +411,27 @@
     "description": "Sypialnia z łazienką. Dodaj pełny zestaw zdjęć oraz opis układu pomieszczeń.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/attic-studio-cover.jpg",
+    "cover": "/assets/library/rooms/attic-studio/cover.webp",
     "sort_order": 13,
-    "visible": true
+    "visible": true,
+    "gallery": [],
+    "closeup_gallery": [
+      "/assets/library/rooms/attic-studio/closeup/6E8A5626.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5627.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5628.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5630.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5634.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5637.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5641.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5642.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5646.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5647.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5650.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5653.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5657.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5661.webp",
+      "/assets/library/rooms/attic-studio/closeup/6E8A5671.webp"
+    ]
   },
   {
     "slug": "flexible-space",
@@ -202,9 +442,48 @@
     "description": "Sypialnia z łazienką. Dodaj pełny zestaw zdjęć oraz opis układu pomieszczeń.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/flexible-space-cover.jpg",
+    "cover": "/assets/library/rooms/flexible-space/cover.webp",
     "sort_order": 14,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164022_20260927164019_1790612291084_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164026_20260927164024_1790612290890_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164030_20260927164027_1790612290723_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164032_20260927164029_1790612290090_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164040_20260927164037_1790612290268_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164114_20260927164111_1790612290526_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164116_20260927164112_1790612289913_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164118_20260927164117_1790612289730_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164122_20260927164119_1790612289509_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164124_20260927164120_1790612288974_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164144_20260927164142_1790612289148_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164148_20260927164143_1790612289328_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164148_20260927164147_1790612288777_photo.webp",
+      "/assets/library/rooms/flexible-space/normalne/dji_mimo_20260927_164208_20260927164205_1790612288545_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/flexible-space/closeup/6E8A5467.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5469.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5471.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5472.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5473.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5475.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5477.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5479.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5481.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5482.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5483.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5485.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5486.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5489.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5490.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5492.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5493.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5494.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5495.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5497.webp",
+      "/assets/library/rooms/flexible-space/closeup/6E8A5500.webp"
+    ]
   },
   {
     "slug": "sypialnia-łazienka",
@@ -215,9 +494,35 @@
     "description": "Sypialnia z łazienką. Dodaj pełny zestaw zdjęć oraz opis układu pomieszczeń.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/sypialnia-lazienka-cover.jpg",
+    "cover": "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5580.webp",
     "sort_order": 15,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/sypialnia-lazienka/normalne/dji_mimo_20260927_163442_20260927163439_1790612293684_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka/normalne/dji_mimo_20260927_163452_20260927163450_1790612293490_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka/normalne/dji_mimo_20260927_163456_20260927163451_1790612293296_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka/normalne/dji_mimo_20260927_163456_20260927163454_1790612293116_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5581.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5582.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5585.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5587.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5591.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5598.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5601.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5603.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5605.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5607.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5608.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5609.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5610.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5611.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5615.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5622.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5623.webp",
+      "/assets/library/rooms/sypialnia-lazienka/closeup/6E8A5624.webp"
+    ]
   },
   {
     "slug": "sypialnia-łazienka-2",
@@ -228,8 +533,40 @@
     "description": "Sypialnia z łazienką. Dodaj pełny zestaw zdjęć oraz opis układu pomieszczeń.",
     "description_en": "Room details and a complete photo gallery will be added here.",
     "description_de": "Raumdetails und die vollständige Fotogalerie werden hier ergänzt.",
-    "cover": "/assets/library/rooms/sypialnia-lazienka-2-cover.jpg",
+    "cover": "/assets/library/rooms/sypialnia-lazienka-2/cover.webp",
     "sort_order": 16,
-    "visible": true
+    "visible": true,
+    "gallery": [
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163550_20260927163546_1790612292910_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163552_20260927163550_1790612292400_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163600_20260927163557_1790612292568_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163608_20260927163605_1790612292761_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163614_20260927163612_1790612292228_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163632_20260927163629_1790612292048_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163634_20260927163630_1790612291849_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163648_20260927163646_1790612291262_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163652_20260927163649_1790612291445_photo.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/normalne/dji_mimo_20260927_163702_20260927163659_1790612291655_photo.webp"
+    ],
+    "closeup_gallery": [
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5532.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5534.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5536.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5537.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5539.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5543.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5546.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5548.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5551.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5557.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5558.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5560.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5564.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5565.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5567.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5568.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5573.webp",
+      "/assets/library/rooms/sypialnia-lazienka-2/closeup/6E8A5577.webp"
+    ]
   }
 ]
