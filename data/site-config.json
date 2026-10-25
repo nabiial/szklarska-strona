@@ -1,0 +1,55 @@
+{
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=G%C3%B3rna+22%2C+Szklarska+Por%C4%99ba",
+  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyAddress=Szklarska%20Por%C4%99ba%2C%20G%C3%B3rna%2022",
+  "geoportalImage": "/assets/library/property/geoportal-parcel.webp",
+  "residenceGallery": [
+    {
+      "src": "/assets/framerusercontent.com/images/cF19fl4mBNoIrUT0t6Sppilkg.00msyla.jpg",
+      "alt": {
+        "pl": "Widok domu od zewnątrz",
+        "en": "Exterior view of the house",
+        "de": "Außenansicht des Hauses"
+      }
+    },
+    {
+      "src": "/assets/framerusercontent.com/images/BpeWE9K54CscXbZBRd7gn9NCpc.02tlvqp.jpg",
+      "alt": {
+        "pl": "Wnętrze domu",
+        "en": "Interior of the house",
+        "de": "Innenansicht des Hauses"
+      }
+    },
+    {
+      "src": "/assets/library/property/residence-03.webp",
+      "alt": {
+        "pl": "Zdjęcie nieruchomości 03",
+        "en": "Property photo 03",
+        "de": "Immobilienfoto 03"
+      }
+    },
+    {
+      "src": "/assets/library/property/residence-04.webp",
+      "alt": {
+        "pl": "Zdjęcie nieruchomości 04",
+        "en": "Property photo 04",
+        "de": "Immobilienfoto 04"
+      }
+    },
+    {
+      "src": "/assets/library/property/residence-05.webp",
+      "alt": {
+        "pl": "Zdjęcie nieruchomości 05",
+        "en": "Property photo 05",
+        "de": "Immobilienfoto 05"
+      }
+    },
+    {
+      "src": "/assets/library/property/residence-06.webp",
+      "alt": {
+        "pl": "Zdjęcie nieruchomości 06",
+        "en": "Property photo 06",
+        "de": "Immobilienfoto 06"
+      }
+    }
+  ]
+}
