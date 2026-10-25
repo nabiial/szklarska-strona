@@ -203,7 +203,6 @@
     if (slides.length) initGallery({ residenceGallery: slides });
   }
 
-  fallbackGallery();
   fetch("/data/site-config.json?v=20261025d", { cache: "no-store" })
     .then(response => {
       if (!response.ok) throw new Error("Config unavailable: HTTP " + response.status);
@@ -212,6 +211,7 @@
     .then(config => { initGallery(config); initMap(config); })
     .catch(error => {
       console.error("[Gorna 22] Could not load site configuration.", error);
+      fallbackGallery();
       initMap({});
     });
 })();
