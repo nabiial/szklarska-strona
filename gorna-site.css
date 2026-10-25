@@ -127,3 +127,8 @@
 
 /* Keep the original property photo gallery visible as a fallback and CMS lightbox target. */
 #residence .framer-ifj41t{display:block!important;}
+
+
+/* Static map fallback for the verified street address; cadastral boundaries remain in Geoportal. */
+.gorna-location-map{display:block;flex:1 1 auto;width:100%;height:420px;min-height:340px;border:0;background:#181818}
+@media(max-width:809px){.gorna-location-map{height:320px;min-height:260px}}

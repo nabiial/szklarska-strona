@@ -1,54 +1,22 @@
 {
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=G%C3%B3rna+22%2C+Szklarska+Por%C4%99ba",
-  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyAddress=Szklarska%20Por%C4%99ba%2C%20G%C3%B3rna%2022",
-  "geoportalImage": "/assets/library/property/geoportal-parcel.webp",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=G%C3%B3rna%2022A%2C%20Szklarska%20Por%C4%99ba",
+  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyParcel=020604_1.0002.236%2F13",
+  "geoportalImage": "",
   "residenceGallery": [
     {
       "src": "/assets/library/property/property-01.jpg",
       "alt": {
-        "pl": "Widok domu od zewnątrz — zdjęcie testowe",
-        "en": "Exterior view of the house — test image",
-        "de": "Außenansicht des Hauses — Testbild"
+        "pl": "Zdjęcie nieruchomości — widok zewnętrzny",
+        "en": "Property photo — exterior view",
+        "de": "Immobilienfoto — Außenansicht"
       }
     },
     {
       "src": "/assets/library/property/property-02.jpg",
       "alt": {
-        "pl": "Wnętrze domu — zdjęcie testowe",
-        "en": "Interior of the house — test image",
-        "de": "Innenansicht des Hauses — Testbild"
-      }
-    },
-    {
-      "src": "/assets/library/property/property-01.jpg",
-      "alt": {
-        "pl": "Widok domu od zewnątrz — zdjęcie testowe",
-        "en": "Exterior view of the house — test image",
-        "de": "Außenansicht des Hauses — Testbild"
-      }
-    },
-    {
-      "src": "/assets/library/property/property-02.jpg",
-      "alt": {
-        "pl": "Wnętrze domu — zdjęcie testowe",
-        "en": "Interior of the house — test image",
-        "de": "Innenansicht des Hauses — Testbild"
-      }
-    },
-    {
-      "src": "/assets/library/property/property-01.jpg",
-      "alt": {
-        "pl": "Widok domu od zewnątrz — zdjęcie testowe",
-        "en": "Exterior view of the house — test image",
-        "de": "Außenansicht des Hauses — Testbild"
-      }
-    },
-    {
-      "src": "/assets/library/property/property-02.jpg",
-      "alt": {
-        "pl": "Wnętrze domu — zdjęcie testowe",
-        "en": "Interior of the house — test image",
-        "de": "Innenansicht des Hauses — Testbild"
+        "pl": "Zdjęcie nieruchomości — wnętrze",
+        "en": "Property photo — interior",
+        "de": "Immobilienfoto — Innenraum"
       }
     }
   ]
