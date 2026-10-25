@@ -44,3 +44,83 @@
  .gorna-location-actions .demo-map-button{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){.gorna-carousel-track{transition:none}}
+
+
+/* Gallery controls and accessible photo lightbox */
+.gorna-residence-carousel { isolation:isolate; }
+.gorna-residence-carousel .gorna-carousel-arrow {
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  box-sizing:border-box !important;
+  padding:0 !important;
+  margin:0 !important;
+  font-family:Arial,sans-serif !important;
+  font-weight:300 !important;
+  text-align:center !important;
+  text-shadow:none !important;
+  box-shadow:0 2px 14px rgba(0,0,0,.24) !important;
+  background-color:rgba(15,15,15,.78) !important;
+}
+.gorna-residence-carousel .gorna-carousel-arrow:focus-visible,
+.gorna-carousel-slide img:focus-visible {
+  outline:2px solid #e8dcc4 !important;
+  outline-offset:3px;
+}
+.gorna-carousel-slide img { cursor:zoom-in; }
+.gorna-image-lightbox {
+  position:fixed;
+  z-index:2147483647;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:5vh 5vw;
+  background:rgba(5,5,5,.96);
+}
+.gorna-image-lightbox.is-open { display:flex; }
+.gorna-image-lightbox__image {
+  display:block;
+  max-width:90vw;
+  max-height:84vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+.gorna-image-lightbox__button {
+  appearance:none;
+  -webkit-appearance:none;
+  position:absolute;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  padding:0;
+  margin:0;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  background:rgba(20,20,20,.85);
+  color:#fff;
+  font:300 30px/1 Arial,sans-serif;
+  cursor:pointer;
+}
+.gorna-image-lightbox__close { top:20px; right:20px; font-size:28px; }
+.gorna-image-lightbox__previous { left:20px; top:50%; transform:translateY(-50%); }
+.gorna-image-lightbox__next { right:20px; top:50%; transform:translateY(-50%); }
+.gorna-image-lightbox__counter {
+  position:absolute;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  color:#e5e0d7;
+  font-size:12px;
+  letter-spacing:.1em;
+}
+@media(max-width:809px) {
+  .gorna-image-lightbox { padding:52px 14px; }
+  .gorna-image-lightbox__image { max-width:96vw; max-height:80vh; }
+  .gorna-image-lightbox__previous { left:8px; }
+  .gorna-image-lightbox__next { right:8px; }
+  .gorna-image-lightbox__button { width:40px; height:40px; }
+}
