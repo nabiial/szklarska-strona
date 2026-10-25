@@ -189,11 +189,29 @@
     });
   }
 
-  fetch("/data/site-config.json?v=20261025b", { cache: "no-store" })
+  function fallbackGallery() {
+    const track = document.querySelector("[data-gorna-gallery] .gorna-carousel-track");
+    if (!track) return;
+    const slides = Array.from(track.querySelectorAll("img")).map(img => ({
+      src: img.getAttribute("src"),
+      alt: {
+        pl: img.getAttribute("alt") || "",
+        en: img.getAttribute("data-alt-en") || img.getAttribute("alt") || "",
+        de: img.getAttribute("data-alt-de") || img.getAttribute("alt") || ""
+      }
+    })).filter(item => item.src);
+    if (slides.length) initGallery({ residenceGallery: slides });
+  }
+
+  fallbackGallery();
+  fetch("/data/site-config.json?v=20261025d", { cache: "no-store" })
     .then(response => {
       if (!response.ok) throw new Error("Config unavailable: HTTP " + response.status);
       return response.json();
     })
     .then(config => { initGallery(config); initMap(config); })
-    .catch(error => console.error("[Gorna 22] Could not load site configuration.", error));
+    .catch(error => {
+      console.error("[Gorna 22] Could not load site configuration.", error);
+      initMap({});
+    });
 })();
