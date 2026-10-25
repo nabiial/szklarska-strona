@@ -132,3 +132,65 @@
 /* Static map fallback for the verified street address; cadastral boundaries remain in Geoportal. */
 .gorna-location-map{display:block;flex:1 1 auto;width:100%;height:420px;min-height:340px;border:0;background:#181818}
 @media(max-width:809px){.gorna-location-map{height:320px;min-height:260px}}
+
+
+/* Expandable high-contrast language selector */
+.gorna-language-switch{
+  position:relative!important;display:flex!important;align-items:center!important;
+  flex:0 0 auto!important;margin-left:auto!important;padding:0 0 0 16px!important;
+  white-space:nowrap!important;z-index:1000!important;
+}
+.gorna-language-trigger{
+  appearance:none!important;-webkit-appearance:none!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:10px!important;min-width:62px!important;min-height:40px!important;padding:9px 12px!important;
+  border:1px solid rgba(255,255,255,.48)!important;border-radius:3px!important;
+  background:rgba(18,18,18,.9)!important;color:#fff!important;
+  font:600 11px/1 Arial,sans-serif!important;letter-spacing:.14em!important;
+  cursor:pointer!important;box-shadow:0 3px 12px rgba(0,0,0,.18)!important;
+  transition:background .2s ease,border-color .2s ease!important;
+}
+.gorna-language-trigger:hover,.gorna-language-trigger[aria-expanded="true"]{
+  background:#242424!important;border-color:rgba(255,255,255,.78)!important;
+}
+.gorna-language-trigger:focus-visible,.gorna-language-panel a:focus-visible{
+  outline:2px solid #fff!important;outline-offset:3px!important;
+}
+.gorna-language-current{color:#fff!important}
+.gorna-language-chevron{
+  width:7px!important;height:7px!important;margin-top:-4px!important;
+  border-right:1.5px solid #fff!important;border-bottom:1.5px solid #fff!important;
+  transform:rotate(45deg)!important;transition:transform .2s ease!important;
+}
+.gorna-language-switch.is-open .gorna-language-chevron{margin-top:4px!important;transform:rotate(225deg)!important}
+.gorna-language-panel{
+  position:absolute!important;top:calc(100% + 10px)!important;right:0!important;
+  display:flex!important;flex-direction:column!important;gap:3px!important;
+  width:184px!important;padding:7px!important;box-sizing:border-box!important;
+  border:1px solid rgba(255,255,255,.22)!important;border-radius:4px!important;
+  background:rgba(17,17,17,.98)!important;box-shadow:0 14px 34px rgba(0,0,0,.42)!important;
+  opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+  transform:translateY(-8px)!important;
+  transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s!important;
+}
+.gorna-language-switch.is-open .gorna-language-panel{
+  opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important;
+  transition:opacity .2s ease,transform .2s ease,visibility 0s!important;
+}
+.gorna-language-panel a{
+  display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;
+  width:100%!important;min-height:40px!important;box-sizing:border-box!important;padding:10px 11px!important;
+  border-radius:2px!important;background:transparent!important;color:#fff!important;
+  text-decoration:none!important;font:500 12px/1.25 Arial,sans-serif!important;
+  letter-spacing:.025em!important;opacity:1!important;transition:background .16s ease!important;
+}
+.gorna-language-panel a:hover,.gorna-language-panel a[aria-current="page"]{background:#303030!important;color:#fff!important}
+.gorna-language-code{color:#ededed!important;font:600 10px/1 Arial,sans-serif!important;letter-spacing:.13em!important}
+@media(max-width:809px){
+  .gorna-language-switch{padding-left:8px!important}
+  .gorna-language-trigger{min-height:38px!important;padding:8px 10px!important}
+  .gorna-language-panel{top:calc(100% + 8px)!important;width:172px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .gorna-language-trigger,.gorna-language-chevron,.gorna-language-panel,.gorna-language-panel a{transition:none!important}
+}

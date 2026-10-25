@@ -18,6 +18,57 @@
     }
   }[lang];
 
+
+  function initLanguageSwitcher() {
+    const root = document.querySelector("[data-language-switch]");
+    if (!root) return;
+    const trigger = root.querySelector(".gorna-language-trigger");
+    const panel = root.querySelector(".gorna-language-panel");
+    if (!trigger || !panel) return;
+    const links = Array.from(panel.querySelectorAll("a"));
+    const isOpen = () => trigger.getAttribute("aria-expanded") === "true";
+
+    function open(focusFirst) {
+      root.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      panel.setAttribute("aria-hidden", "false");
+      panel.removeAttribute("inert");
+      if (focusFirst && links[0]) links[0].focus();
+    }
+
+    function close(restoreFocus) {
+      root.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+      panel.setAttribute("aria-hidden", "true");
+      panel.setAttribute("inert", "");
+      if (restoreFocus) trigger.focus();
+    }
+
+    trigger.addEventListener("click", () => {
+      if (isOpen()) close(false);
+      else open(false);
+    });
+    trigger.addEventListener("keydown", event => {
+      if (event.key === "ArrowDown") { event.preventDefault(); open(true); }
+    });
+    panel.addEventListener("keydown", event => {
+      if (event.key === "Escape") { event.preventDefault(); close(true); return; }
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+      event.preventDefault();
+      const current = links.indexOf(document.activeElement);
+      const next = (current + (event.key === "ArrowDown" ? 1 : -1) + links.length) % links.length;
+      if (links[next]) links[next].focus();
+    });
+    document.addEventListener("pointerdown", event => {
+      if (isOpen() && !root.contains(event.target)) close(false);
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && isOpen()) close(true);
+    });
+  }
+
+  initLanguageSwitcher();
+
   function makePlaceholder(item, index) {
     const el = document.createElement("div");
     el.className = "gorna-slide-placeholder";
