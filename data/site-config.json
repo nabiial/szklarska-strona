@@ -6,17 +6,49 @@
     {
       "src": "/assets/library/property/property-01.jpg",
       "alt": {
-        "pl": "Zdjęcie nieruchomości — widok zewnętrzny",
-        "en": "Property photo — exterior view",
-        "de": "Immobilienfoto — Außenansicht"
+        "pl": "Widok domu od zewnątrz — 1",
+        "en": "Exterior view of the house — 1",
+        "de": "Außenansicht des Hauses — 1"
       }
     },
     {
       "src": "/assets/library/property/property-02.jpg",
       "alt": {
-        "pl": "Zdjęcie nieruchomości — wnętrze",
-        "en": "Property photo — interior",
-        "de": "Immobilienfoto — Innenraum"
+        "pl": "Wnętrze domu — 2",
+        "en": "Interior of the house — 2",
+        "de": "Innenansicht des Hauses — 2"
+      }
+    },
+    {
+      "src": "/assets/library/property/property-01.jpg",
+      "alt": {
+        "pl": "Widok domu od zewnątrz — 3",
+        "en": "Exterior view of the house — 3",
+        "de": "Außenansicht des Hauses — 3"
+      }
+    },
+    {
+      "src": "/assets/library/property/property-02.jpg",
+      "alt": {
+        "pl": "Wnętrze domu — 4",
+        "en": "Interior of the house — 4",
+        "de": "Innenansicht des Hauses — 4"
+      }
+    },
+    {
+      "src": "/assets/library/property/property-01.jpg",
+      "alt": {
+        "pl": "Widok domu od zewnątrz — 5",
+        "en": "Exterior view of the house — 5",
+        "de": "Außenansicht des Hauses — 5"
+      }
+    },
+    {
+      "src": "/assets/library/property/property-02.jpg",
+      "alt": {
+        "pl": "Wnętrze domu — 6",
+        "en": "Interior of the house — 6",
+        "de": "Innenansicht des Hauses — 6"
       }
     }
   ]
