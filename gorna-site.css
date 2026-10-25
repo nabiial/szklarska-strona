@@ -261,3 +261,18 @@
 @media(prefers-reduced-motion:reduce){
   .gorna-contact-field input,.gorna-contact-field textarea,.gorna-contact-submit{transition:none}
 }
+
+
+/* Keep the main property navigation visible while the page is being scrolled. */
+.framer-MKYZs > nav.framer-10x8oio{
+  position:sticky!important;
+  top:0!important;
+  z-index:10000!important;
+  width:100%!important;
+  box-sizing:border-box!important;
+  background-color:var(--token-fc16edd0-affb-456f-8870-2d4b031d5ef8)!important;
+  isolation:isolate;
+}
+@media(prefers-reduced-motion:reduce){
+  .framer-MKYZs > nav.framer-10x8oio{scroll-behavior:auto}
+}
