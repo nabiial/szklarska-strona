@@ -271,38 +271,100 @@
   }
 
   function initMap(config) {
-    const kiegMap = document.getElementById("gorna-kieg-map");
-    const kiegFallback = document.getElementById("gorna-kieg-map-fallback");
-    if (kiegMap && kiegFallback) {
-      const showMapFallback = () => {
-        kiegMap.hidden = true;
-        kiegFallback.hidden = false;
-      };
-      const showKiegMap = () => {
-        kiegMap.hidden = false;
-        kiegFallback.hidden = true;
-      };
-      kiegMap.addEventListener("load", showKiegMap, { once: true });
-      kiegMap.addEventListener("error", showMapFallback, { once: true });
-      if (kiegMap.complete) {
-        if (kiegMap.naturalWidth > 0) showKiegMap();
-        else showMapFallback();
+    const mapImage = document.getElementById("gorna-kieg-map");
+    const mapOverlay = document.getElementById("gorna-parcel-overlay");
+    const mapShapes = document.getElementById("gorna-parcel-shapes");
+    const mapLoading = document.getElementById("gorna-kieg-map-loading");
+    const mapFallback = document.getElementById("gorna-kieg-map-fallback");
+
+    if (mapImage && mapOverlay && mapShapes && mapLoading && mapFallback) {
+      const MAP_WIDTH = 1200;
+      const MAP_HEIGHT = 720;
+      const NS = "http://www.w3.org/2000/svg";
+
+      function showMapError(error) {
+        console.error("[Gorna 22] Could not load the cadastral parcel map.", error);
+        mapImage.hidden = true;
+        mapOverlay.hidden = true;
+        mapLoading.hidden = true;
+        mapFallback.hidden = false;
       }
+
+      function drawParcelGeometry(data) {
+        if (!data || !Array.isArray(data.polygons) || !data.polygons.length || !Array.isArray(data.bbox)) {
+          throw new Error("The cadastral service returned no parcel geometry.");
+        }
+        const [minX, minY, maxX, maxY] = data.bbox.map(Number);
+        if (![minX, minY, maxX, maxY].every(Number.isFinite) || maxX <= minX || maxY <= minY) {
+          throw new Error("The parcel extent is invalid.");
+        }
+
+        const parcelWidth = maxX - minX;
+        const parcelHeight = maxY - minY;
+        const targetWidth = Math.max(parcelWidth * 1.5, parcelHeight * (MAP_WIDTH / MAP_HEIGHT) * 1.5, 160);
+        const targetHeight = targetWidth * MAP_HEIGHT / MAP_WIDTH;
+        const centerX = (minX + maxX) / 2;
+        const centerY = (minY + maxY) / 2;
+        const view = {
+          minX: centerX - targetWidth / 2,
+          minY: centerY - targetHeight / 2,
+          maxX: centerX + targetWidth / 2,
+          maxY: centerY + targetHeight / 2
+        };
+
+        const pathFromRings = rings => rings.map(ring => {
+          if (!Array.isArray(ring) || ring.length < 3) return "";
+          return ring.map((point, index) => {
+            const x = ((Number(point[0]) - view.minX) / targetWidth) * MAP_WIDTH;
+            const y = ((view.maxY - Number(point[1])) / targetHeight) * MAP_HEIGHT;
+            if (!Number.isFinite(x) || !Number.isFinite(y)) return "";
+            return (index === 0 ? "M" : "L") + x.toFixed(2) + " " + y.toFixed(2);
+          }).join(" ") + " Z";
+        }).join(" ");
+
+        mapShapes.replaceChildren();
+        data.polygons.forEach(polygon => {
+          const path = document.createElementNS(NS, "path");
+          path.setAttribute("d", pathFromRings(polygon));
+          path.setAttribute("fill-rule", "evenodd");
+          path.setAttribute("aria-label", "Granica działki 020604_1.0002.236/13");
+          mapShapes.appendChild(path);
+        });
+
+        const params = new URLSearchParams({
+          SERVICE: "WMS",
+          REQUEST: "GetMap",
+          VERSION: "1.1.1",
+          LAYERS: "dzialki,numery_dzialek,budynki",
+          STYLES: "",
+          SRS: "EPSG:2180",
+          BBOX: [view.minX, view.minY, view.maxX, view.maxY].map(value => value.toFixed(2)).join(","),
+          WIDTH: String(MAP_WIDTH),
+          HEIGHT: String(MAP_HEIGHT),
+          FORMAT: "image/png",
+          TRANSPARENT: "FALSE"
+        });
+        const wmsUrl = "https://integracja.gugik.gov.pl/cgi-bin/KrajowaIntegracjaEwidencjiGruntow?" + params.toString();
+
+        mapImage.onload = () => {
+          mapLoading.hidden = true;
+          mapFallback.hidden = true;
+          mapImage.hidden = false;
+          mapOverlay.hidden = false;
+        };
+        mapImage.onerror = () => showMapError(new Error("The KIEG WMS map image could not be loaded."));
+        mapImage.src = wmsUrl;
+      }
+
+      fetch("/api/parcel", { headers: { "Accept": "application/json" }, cache: "no-store" })
+        .then(response => {
+          if (!response.ok) throw new Error("Parcel API returned HTTP " + response.status);
+          return response.json();
+        })
+        .then(drawParcelGeometry)
+        .catch(showMapError);
     }
 
-    const image = document.getElementById("gorna-geoportal-image");
-    const placeholder = document.getElementById("gorna-geoportal-placeholder");
-    if (image && config.geoportalImage) {
-      image.addEventListener("load", () => {
-        image.hidden = false;
-        if (placeholder) placeholder.hidden = true;
-      }, { once: true });
-      image.addEventListener("error", () => {
-        image.hidden = true;
-        if (placeholder) placeholder.hidden = false;
-      }, { once: true });
-      image.src = config.geoportalImage;
-    }
     document.querySelectorAll("[data-gorna-link]").forEach(link => {
       const key = link.getAttribute("data-gorna-link");
       if (typeof config[key] === "string" && config[key]) link.href = config[key];

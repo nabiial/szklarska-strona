@@ -30,7 +30,7 @@
 <!-- End of headEnd -->
 
 
-<link rel="stylesheet" href="../library.css"><link rel="stylesheet" href="/gorna-site.css?v=20261026g"></head>
+<link rel="stylesheet" href="../library.css"><link rel="stylesheet" href="/gorna-site.css?v=20261026h"></head>
 <body>
 <!-- Start of bodyStart -->
 <!-- End of bodyStart -->
@@ -82,28 +82,29 @@
     <h2 class="framer-text framer-styles-preset-1ay7vlg" data-styles-preset="DQK8TRUIg" dir="auto" style="--framer-text-alignment:start">Location and surroundings</h2>
   </div>
   <div class="framer-1lmb2sl" data-framer-component-type="RichTextContainer" style="transform:none">
-    <p class="framer-text framer-styles-preset-1yn8miw" data-styles-preset="hsXT0T6eW" dir="auto" style="--framer-text-alignment:start">Górna 22A in Szklarska Poręba — explore the cadastral parcel map, the property's location and nearby attractions worth visiting.</p>
+    <p class="framer-text framer-styles-preset-1yn8miw" data-styles-preset="hsXT0T6eW" dir="auto" style="--framer-text-alignment:start">Górna 22A in Szklarska Poręba — see the actual cadastral outline of the parcel, the property's location and the area's most interesting attractions.</p>
   </div>
   <div class="gorna-location-content">
     <div class="gorna-location-main-grid">
       <div class="gorna-location-maps-column">
         <article class="gorna-location-card">
           <div class="gorna-location-card-heading">
-            <span class="gorna-location-kicker">CADASTRAL MAP · GUGiK / KIEG</span>
+            <span class="gorna-location-kicker">CADASTRAL MAP · GUGiK</span>
             <h3>Parcel 236/13 · 3,592 m²</h3>
-            <p>Parcel ID: 020604_1.0002.236/13 · registered area: 3,592 m²</p>
+            <p>Parcel ID: 020604_1.0002.236/13</p>
           </div>
           <div class="gorna-location-embed-wrap gorna-kieg-map-stage">
-            <img id="gorna-kieg-map" class="gorna-kieg-map-image" src="https://integracja.gugik.gov.pl/cgi-bin/KrajowaIntegracjaEwidencjiGruntow?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=obreby%2Cdzialki%2Cnumery_dzialek%2Cbudynki&STYLES=&SRS=EPSG%3A2180&BBOX=256476%2C336608%2C256776%2C336808&WIDTH=1200&HEIGHT=800&FORMAT=image%2Fpng&TRANSPARENT=FALSE" alt="Parcel 236/13 · 3,592 m² — CADASTRAL MAP · GUGiK / KIEG" loading="lazy" decoding="async">
-            <div class="gorna-kieg-map-marker" aria-hidden="true"><span></span><b>Górna 22A</b></div>
-            <div class="gorna-kieg-map-source">GUGiK · KIEG / WMS</div>
-            <div class="gorna-geoportal-placeholder" id="gorna-kieg-map-fallback" hidden>
-              <span class="gorna-map-kicker">GUGiK · KIEG / WMS</span>
+            <img id="gorna-kieg-map" class="gorna-kieg-map-image" alt="Parcel 236/13 · 3,592 m²" loading="eager" decoding="async" hidden>
+            <svg id="gorna-parcel-overlay" class="gorna-parcel-overlay" viewBox="0 0 1200 720" preserveAspectRatio="none" role="img" aria-label="Parcel 236/13 · 3,592 m² — granica ewidencyjna" hidden><g id="gorna-parcel-shapes"></g></svg>
+            <div class="gorna-kieg-map-loading" id="gorna-kieg-map-loading" role="status">Loading parcel boundaries from the cadastral register…</div>
+            <div class="gorna-geoportal-placeholder gorna-kieg-map-fallback" id="gorna-kieg-map-fallback" hidden>
+              <span class="gorna-map-kicker">GUGiK · KIEG / ULDK</span>
               <strong>Parcel 236/13 · 3,592 m²</strong>
-              <p>The map preview could not be loaded. Open the parcel directly in the official Geoportal using the button below.</p>
+              <p>The parcel geometry or KIEG map could not be loaded. Open the parcel directly in the official Geoportal.</p>
             </div>
+            <div class="gorna-kieg-map-source">GUGiK · KIEG / ULDK</div>
           </div>
-          <p class="gorna-location-map-note">Map image from the national KIEG service (GUGiK WMS), showing cadastral boundaries, parcel numbers and buildings. The Górna 22A address marker is approximate; on-site boundaries should be confirmed by surveying documentation.</p>
+          <p class="gorna-location-map-note">The red outline shows the parcel geometry retrieved from the official EGiB register (ULDK); the basemap comes from GUGiK's KIEG service. On-site boundaries should be confirmed by surveying documentation.</p>
         </article>
         <article class="gorna-location-card">
           <div class="gorna-location-card-heading">
@@ -119,8 +120,8 @@
       <aside class="gorna-nearby-panel">
         <div class="gorna-nearby-heading">
           <span class="gorna-location-kicker">GÓRNA 22A · NEARBY</span>
-          <h3>Nearby attractions and places to visit</h3>
-          <p>11 nearby places. Distances are approximate straight-line measurements from the property.</p>
+          <h3>Nearby attractions and viewpoints</h3>
+          <p>8 nearby places. Distances are approximate straight-line measurements from the property.</p>
         </div>
         <ol class="gorna-nearby-list"><li class="gorna-nearby-item">
     <span class="gorna-nearby-number">01</span>
@@ -142,7 +143,7 @@
     <span class="gorna-nearby-number">03</span>
     <div class="gorna-nearby-copy">
       <div class="gorna-nearby-title-row"><h4>Carl and Gerhart Hauptmann House</h4><span class="gorna-nearby-distance">1.1 km</span></div>
-      <p>A branch of the Karkonosze Museum in a historic villa, with exhibitions on the region, its artists' colony and Wlastimil Hofman.</p>
+      <p>A historic villa and branch of the Karkonosze Museum, with exhibitions on the region, its artists' colony and Wlastimil Hofman.</p>
       <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.839284187933%2C15.529968738556" target="_blank" rel="noopener noreferrer">Directions <span aria-hidden="true">↗</span></a>
     </div>
   </li>
@@ -182,32 +183,8 @@
     <span class="gorna-nearby-number">08</span>
     <div class="gorna-nearby-copy">
       <div class="gorna-nearby-title-row"><h4>Szklarki Waterfall</h4><span class="gorna-nearby-distance">2.0 km</span></div>
-      <p>A 13.3-metre cascade in the scenic Szklarki Gorge, within Karkonosze National Park.</p>
+      <p>A scenic 13.3-metre cascade in the Szklarki Gorge, within Karkonosze National Park.</p>
       <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.829937%2C15.555696" target="_blank" rel="noopener noreferrer">Directions <span aria-hidden="true">↗</span></a>
-    </div>
-  </li>
-<li class="gorna-nearby-item">
-    <span class="gorna-nearby-number">09</span>
-    <div class="gorna-nearby-copy">
-      <div class="gorna-nearby-title-row"><h4>Leśna Huta Glassworks</h4><span class="gorna-nearby-distance">2.4 km</span></div>
-      <p>Live demonstrations of traditional glassmaking and an introduction to the region's glasscraft heritage.</p>
-      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.824512%2C15.539212" target="_blank" rel="noopener noreferrer">Directions <span aria-hidden="true">↗</span></a>
-    </div>
-  </li>
-<li class="gorna-nearby-item">
-    <span class="gorna-nearby-number">10</span>
-    <div class="gorna-nearby-copy">
-      <div class="gorna-nearby-title-row"><h4>Esplanada Family Amusement Park</h4><span class="gorna-nearby-distance">2.4 km</span></div>
-      <p>A family activity park with the Alpine Coaster, mini golf and seasonal attractions.</p>
-      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.827720616695%2C15.522533544982" target="_blank" rel="noopener noreferrer">Directions <span aria-hidden="true">↗</span></a>
-    </div>
-  </li>
-<li class="gorna-nearby-item">
-    <span class="gorna-nearby-number">11</span>
-    <div class="gorna-nearby-copy">
-      <div class="gorna-nearby-title-row"><h4>Mineralogical Museum</h4><span class="gorna-nearby-distance">3.4 km</span></div>
-      <p>A collection of minerals, meteorites and fossils from the Karkonosze region and around the world.</p>
-      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.8171637%2C15.5260699" target="_blank" rel="noopener noreferrer">Directions <span aria-hidden="true">↗</span></a>
     </div>
   </li></ol>
       </aside>
@@ -266,5 +243,5 @@
 </div>
 </div>
 <script id="demo-plan-lightbox-script" src="js/12-plan-lightbox.js"></script>
-<script src="../js/13-library-sync.js" defer></script><script src="/gorna-site.js?v=20261026b" defer></script></body>
+<script src="../js/13-library-sync.js" defer></script><script src="/gorna-site.js?v=20261026c" defer></script></body>
 </html>
