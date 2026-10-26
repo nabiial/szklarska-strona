@@ -80,8 +80,19 @@ function parseWkbHex(hex) {
 
   const rawGeometry = readGeometry();
   if (offset !== bytes.length) throw new Error("WKB geometry contains trailing bytes.");
-  const polygons = Array.isArray(rawGeometry[0]) && typeof rawGeometry[0][0] === "number" ? [rawGeometry] : rawGeometry;
-  if (!polygons.length) throw new Error("No polygon rings were returned by ULDK.");
+
+  // A Polygon is [rings][points][x,y]; a MultiPolygon is
+  // [polygons][rings][points][x,y]. Normalize both to one shape.
+  const isSinglePolygon =
+    Array.isArray(rawGeometry) &&
+    Array.isArray(rawGeometry[0]) &&
+    Array.isArray(rawGeometry[0][0]) &&
+    typeof rawGeometry[0][0][0] === "number";
+  const polygons = isSinglePolygon ? [rawGeometry] : rawGeometry;
+
+  if (!Array.isArray(polygons) || !polygons.length) {
+    throw new Error("No polygon rings were returned by ULDK.");
+  }
 
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
   for (const polygon of polygons) {
