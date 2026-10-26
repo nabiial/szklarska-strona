@@ -30,7 +30,7 @@
 <!-- End of headEnd -->
 
 
-<link rel="stylesheet" href="library.css"><link rel="stylesheet" href="/gorna-site.css?v=20261026f"></head>
+<link rel="stylesheet" href="library.css"><link rel="stylesheet" href="/gorna-site.css?v=20261026g"></head>
 <body>
 <!-- Start of bodyStart -->
 <!-- End of bodyStart -->
@@ -82,21 +82,28 @@
     <h2 class="framer-text framer-styles-preset-1ay7vlg" data-styles-preset="DQK8TRUIg" dir="auto" style="--framer-text-alignment:start">Lokalizacja i otoczenie</h2>
   </div>
   <div class="framer-1lmb2sl" data-framer-component-type="RichTextContainer" style="transform:none">
-    <p class="framer-text framer-styles-preset-1yn8miw" data-styles-preset="hsXT0T6eW" dir="auto" style="--framer-text-alignment:start">Górna 22A, Szklarska Poręba. Poniżej znajdziesz podgląd działki w państwowym Geoportalu, mapę lokalizacji nieruchomości oraz pięć pobliskich atrakcji i punktów widokowych.</p>
+    <p class="framer-text framer-styles-preset-1yn8miw" data-styles-preset="hsXT0T6eW" dir="auto" style="--framer-text-alignment:start">Górna 22A w Szklarskiej Porębie — zobacz mapę ewidencyjną działki, położenie domu oraz atrakcje i miejsca warte odwiedzenia w okolicy.</p>
   </div>
   <div class="gorna-location-content">
     <div class="gorna-location-main-grid">
       <div class="gorna-location-maps-column">
         <article class="gorna-location-card">
           <div class="gorna-location-card-heading">
-            <span class="gorna-location-kicker">MAPA EWIDENCYJNA · GEOPORTAL</span>
-            <h3>Działka 236/13</h3>
-            <p>Identyfikator: 020604_1.0002.236/13 · powierzchnia ok. 3 591 m²</p>
+            <span class="gorna-location-kicker">MAPA EWIDENCYJNA · GUGiK / KIEG</span>
+            <h3>Działka 236/13 · 3 592 m²</h3>
+            <p>Identyfikator: 020604_1.0002.236/13 · powierzchnia ewidencyjna: 3 592 m²</p>
           </div>
-          <div class="gorna-location-embed-wrap">
-            <iframe class="gorna-location-embed" src="https://mapy.geoportal.gov.pl/imapnext/imap/?identifyParcel=020604_1.0002.236%2F13" title="Działka 236/13 — MAPA EWIDENCYJNA · GEOPORTAL" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="gorna-location-embed-wrap gorna-kieg-map-stage">
+            <img id="gorna-kieg-map" class="gorna-kieg-map-image" src="https://integracja.gugik.gov.pl/cgi-bin/KrajowaIntegracjaEwidencjiGruntow?REQUEST=GetMap&TRANSPARENT=TRUE&FORMAT=image%2Fpng&VERSION=1.3.0&LAYERS=obreby%2Cdzialki%2Cnumery_dzialek%2Cbudynki&STYLES=%2C%2C%2C%2C%2C&BBOX=256476%2C336608%2C256776%2C336808&CRS=EPSG%3A2180&EXCEPTIONS=xml&WIDTH=1200&HEIGHT=800" alt="Działka 236/13 · 3 592 m² — MAPA EWIDENCYJNA · GUGiK / KIEG" loading="lazy" decoding="async">
+            <div class="gorna-kieg-map-marker" aria-hidden="true"><span></span><b>Górna 22A</b></div>
+            <div class="gorna-kieg-map-source">GUGiK · KIEG / WMS</div>
+            <div class="gorna-geoportal-placeholder" id="gorna-kieg-map-fallback" hidden>
+              <span class="gorna-map-kicker">GUGiK · KIEG / WMS</span>
+              <strong>Działka 236/13 · 3 592 m²</strong>
+              <p>Nie udało się wczytać podglądu mapy. Otwórz działkę bezpośrednio w Geoportalu przyciskiem poniżej.</p>
+            </div>
           </div>
-          <p class="gorna-location-map-note">Interaktywny podgląd danych ewidencyjnych z Geoportalu. Granice mają charakter informacyjny — ich przebieg w terenie potwierdza dokumentacja geodezyjna.</p>
+          <p class="gorna-location-map-note">Mapa pochodzi z państwowej usługi KIEG (WMS GUGiK) i pokazuje granice ewidencyjne, numery działek oraz budynki. Punkt adresowy Górna 22A ma charakter orientacyjny; przebieg granic w terenie potwierdza dokumentacja geodezyjna.</p>
         </article>
         <article class="gorna-location-card">
           <div class="gorna-location-card-heading">
@@ -112,28 +119,35 @@
       <aside class="gorna-nearby-panel">
         <div class="gorna-nearby-heading">
           <span class="gorna-location-kicker">GÓRNA 22A · OKOLICA</span>
-          <h3>Atrakcje w najbliższej okolicy</h3>
-          <p>Pięć pobliskich miejsc — odległości orientacyjne w linii prostej od nieruchomości.</p>
+          <h3>Atrakcje i miejsca w najbliższej okolicy</h3>
+          <p>11 pobliskich punktów. Odległości orientacyjne, liczone w linii prostej od nieruchomości.</p>
         </div>
-        <ol class="gorna-nearby-list">
-<li class="gorna-nearby-item">
+        <ol class="gorna-nearby-list"><li class="gorna-nearby-item">
     <span class="gorna-nearby-number">01</span>
     <div class="gorna-nearby-copy">
-      <div class="gorna-nearby-title-row"><h4>Zakręt Śmierci</h4><span class="gorna-nearby-distance">0,5 km</span></div>
-      <p>Punkt widokowy z panoramą Karkonoszy, miasta i Kotliny Jeleniogórskiej. Przy drodze znajduje się platforma widokowa.</p>
+      <div class="gorna-nearby-title-row"><h4>Zakręt Śmierci</h4><span class="gorna-nearby-distance">0,6 km</span></div>
+      <p>Punkt widokowy z panoramą Karkonoszy, miasta i Kotliny Jeleniogórskiej.</p>
       <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.8487458%2C15.5351694" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
     </div>
   </li>
 <li class="gorna-nearby-item">
     <span class="gorna-nearby-number">02</span>
     <div class="gorna-nearby-copy">
-      <div class="gorna-nearby-title-row"><h4>Wlastimilówka</h4><span class="gorna-nearby-distance">1,5 km</span></div>
-      <p>Dawny dom malarza Wlastimila Hofmana, dziś kameralne muzeum z obrazami i zachowaną pracownią. Zwiedzanie wymaga wcześniejszego uzgodnienia telefonicznego.</p>
-      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.83346%2C15.550796" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+      <div class="gorna-nearby-title-row"><h4>Dinopark</h4><span class="gorna-nearby-distance">0,9 km</span></div>
+      <p>Leśny park edukacyjno-rozrywkowy ze ścieżką dinozaurów, kinem 6D i atrakcjami dla rodzin.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.83804418195143%2C15.54180694" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
     </div>
   </li>
 <li class="gorna-nearby-item">
     <span class="gorna-nearby-number">03</span>
+    <div class="gorna-nearby-copy">
+      <div class="gorna-nearby-title-row"><h4>Dom Carla i Gerharta Hauptmannów</h4><span class="gorna-nearby-distance">1,1 km</span></div>
+      <p>Oddział Muzeum Karkonoskiego w zabytkowej willi. Wystawy poświęcone historii regionu, kolonii artystycznej i twórczości Wlastimila Hofmana.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.839284187933%2C15.529968738556" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+    </div>
+  </li>
+<li class="gorna-nearby-item">
+    <span class="gorna-nearby-number">04</span>
     <div class="gorna-nearby-copy">
       <div class="gorna-nearby-title-row"><h4>Chybotek</h4><span class="gorna-nearby-distance">1,6 km</span></div>
       <p>Grupa granitowych głazów, z których największy można delikatnie rozkołysać. W pobliżu przebiega niebieski szlak.</p>
@@ -141,22 +155,61 @@
     </div>
   </li>
 <li class="gorna-nearby-item">
-    <span class="gorna-nearby-number">04</span>
+    <span class="gorna-nearby-number">05</span>
     <div class="gorna-nearby-copy">
-      <div class="gorna-nearby-title-row"><h4>Grób Karkonosza</h4><span class="gorna-nearby-distance">1,7 km</span></div>
-      <p>Symboliczne miejsce związane z legendą o Duchu Gór, znanym także jako Karkonosz i Liczyrzepa. Leży przy leśnych drogach w pobliżu Złotego Widoku.</p>
-      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.832928%2C15.552913" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+      <div class="gorna-nearby-title-row"><h4>Grób Karkonosza</h4><span class="gorna-nearby-distance">1,6 km</span></div>
+      <p>Symboliczne miejsce związane z legendą o Duchu Gór, znanym także jako Karkonosz i Liczyrzepa.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.833174017822%2C15.552955750372" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
     </div>
   </li>
 <li class="gorna-nearby-item">
-    <span class="gorna-nearby-number">05</span>
+    <span class="gorna-nearby-number">06</span>
     <div class="gorna-nearby-copy">
       <div class="gorna-nearby-title-row"><h4>Złoty Widok</h4><span class="gorna-nearby-distance">1,7 km</span></div>
       <p>Taras widokowy nad ponad 20-metrowym urwiskiem, z panoramą Karkonoszy, Doliny Kamiennej i Kotliny Jeleniogórskiej.</p>
       <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.832321%2C15.552932" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
     </div>
   </li>
-</ol>
+<li class="gorna-nearby-item">
+    <span class="gorna-nearby-number">07</span>
+    <div class="gorna-nearby-copy">
+      <div class="gorna-nearby-title-row"><h4>Muzeum Ziemi JUNA</h4><span class="gorna-nearby-distance">1,8 km</span></div>
+      <p>Kolekcja minerałów, skamieniałości i wystawa poświęcona tradycjom dawnych poszukiwaczy skarbów — Walończyków.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.829624946397%2C15.543222295782" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+    </div>
+  </li>
+<li class="gorna-nearby-item">
+    <span class="gorna-nearby-number">08</span>
+    <div class="gorna-nearby-copy">
+      <div class="gorna-nearby-title-row"><h4>Wodospad Szklarki</h4><span class="gorna-nearby-distance">2,0 km</span></div>
+      <p>Kaskada o wysokości 13,3 m w malowniczym Wąwozie Szklarki, na terenie Karkonoskiego Parku Narodowego.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.829937%2C15.555696" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+    </div>
+  </li>
+<li class="gorna-nearby-item">
+    <span class="gorna-nearby-number">09</span>
+    <div class="gorna-nearby-copy">
+      <div class="gorna-nearby-title-row"><h4>Leśna Huta</h4><span class="gorna-nearby-distance">2,4 km</span></div>
+      <p>Pokazy tradycyjnego formowania szkła na żywo oraz możliwość poznania lokalnego rzemiosła szklarskiego.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.824512%2C15.539212" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+    </div>
+  </li>
+<li class="gorna-nearby-item">
+    <span class="gorna-nearby-number">10</span>
+    <div class="gorna-nearby-copy">
+      <div class="gorna-nearby-title-row"><h4>Rodzinny Park Rozrywki Esplanada</h4><span class="gorna-nearby-distance">2,4 km</span></div>
+      <p>Park rodzinny z górską kolejką Alpine Coaster, minigolfem i atrakcjami sezonowymi.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.827720616695%2C15.522533544982" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+    </div>
+  </li>
+<li class="gorna-nearby-item">
+    <span class="gorna-nearby-number">11</span>
+    <div class="gorna-nearby-copy">
+      <div class="gorna-nearby-title-row"><h4>Muzeum Mineralogiczne</h4><span class="gorna-nearby-distance">3,4 km</span></div>
+      <p>Zbiory minerałów, meteorytów i skamieniałości z Karkonoszy oraz z różnych stron świata.</p>
+      <a class="gorna-nearby-directions" href="https://www.google.com/maps/dir/?api=1&destination=50.8171637%2C15.5260699" target="_blank" rel="noopener noreferrer">Prowadź <span aria-hidden="true">↗</span></a>
+    </div>
+  </li></ol>
       </aside>
     </div>
     <div class="gorna-location-actions">
@@ -213,5 +266,5 @@
 </div>
 </div>
 <script id="demo-plan-lightbox-script" src="js/12-plan-lightbox.js"></script>
-<script src="js/13-library-sync.js" defer></script><script src="/gorna-site.js?v=20261026a" defer></script></body>
+<script src="js/13-library-sync.js" defer></script><script src="/gorna-site.js?v=20261026b" defer></script></body>
 </html>

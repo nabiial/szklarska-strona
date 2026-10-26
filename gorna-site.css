@@ -371,3 +371,52 @@
   .gorna-location-actions{flex-direction:column;align-items:stretch}
   .gorna-location-actions .demo-map-button{justify-content:center;width:100%;box-sizing:border-box}
 }
+
+
+/* Official GUGiK KIEG map image and visible address marker */
+.gorna-kieg-map-stage{position:relative;isolation:isolate;background:#e9e5da;overflow:hidden}
+.gorna-kieg-map-image{display:block;width:100%;height:100%;object-fit:cover;background:#e9e5da}
+.gorna-kieg-map-marker{
+  position:absolute;left:50%;top:50%;z-index:2;display:flex;align-items:center;gap:8px;
+  transform:translate(-6px,-50%);pointer-events:none;
+}
+.gorna-kieg-map-marker span{
+  display:block;width:13px;height:13px;flex:0 0 13px;border:3px solid #fff;border-radius:50%;
+  background:#9a352b;box-shadow:0 1px 7px rgba(0,0,0,.55);
+}
+.gorna-kieg-map-marker b{
+  display:block;padding:6px 9px;border:1px solid rgba(255,255,255,.78);border-radius:2px;
+  background:rgba(24,24,24,.92);color:#fff;font:600 10px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 9px rgba(0,0,0,.25);
+}
+.gorna-kieg-map-source{
+  position:absolute;right:10px;bottom:10px;z-index:2;padding:5px 7px;
+  border:1px solid rgba(255,255,255,.65);border-radius:2px;
+  background:rgba(24,24,24,.86);color:#fff;font:500 9px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.08em;pointer-events:none;
+}
+.gorna-kieg-map-stage .gorna-geoportal-placeholder{
+  position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;
+}
+.gorna-kieg-map-stage .gorna-geoportal-placeholder[hidden]{display:none!important}
+.gorna-location-actions .gorna-secondary-map-button,
+.gorna-location-actions .gorna-secondary-map-button:link,
+.gorna-location-actions .gorna-secondary-map-button:visited{
+  background:rgba(215,199,170,.12)!important;
+  border:1px solid rgba(215,199,170,.7)!important;
+  color:#fff!important;
+  opacity:1!important;
+}
+.gorna-location-actions .gorna-secondary-map-button:hover{
+  background:#d7c7aa!important;border-color:#d7c7aa!important;color:#171613!important;
+}
+.gorna-location-actions .gorna-secondary-map-button:focus-visible{
+  outline:2px solid #fff!important;outline-offset:3px!important;
+}
+.gorna-nearby-item{grid-template-columns:28px minmax(0,1fr)}
+.gorna-nearby-panel{padding-bottom:20px}
+.gorna-nearby-copy p{max-width:640px}
+@media(max-width:809px){
+  .gorna-kieg-map-marker b{font-size:9px}
+  .gorna-kieg-map-marker{gap:6px}
+}

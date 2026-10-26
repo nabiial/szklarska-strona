@@ -271,6 +271,25 @@
   }
 
   function initMap(config) {
+    const kiegMap = document.getElementById("gorna-kieg-map");
+    const kiegFallback = document.getElementById("gorna-kieg-map-fallback");
+    if (kiegMap && kiegFallback) {
+      const showMapFallback = () => {
+        kiegMap.hidden = true;
+        kiegFallback.hidden = false;
+      };
+      const showKiegMap = () => {
+        kiegMap.hidden = false;
+        kiegFallback.hidden = true;
+      };
+      kiegMap.addEventListener("load", showKiegMap, { once: true });
+      kiegMap.addEventListener("error", showMapFallback, { once: true });
+      if (kiegMap.complete) {
+        if (kiegMap.naturalWidth > 0) showKiegMap();
+        else showMapFallback();
+      }
+    }
+
     const image = document.getElementById("gorna-geoportal-image");
     const placeholder = document.getElementById("gorna-geoportal-placeholder");
     if (image && config.geoportalImage) {
