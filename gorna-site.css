@@ -575,3 +575,70 @@
   .gorna-nearby-item{padding:12px 0!important}
   .gorna-nearby-title-row h4{font-size:13px!important}
 }
+
+
+/* Screenshot-based parcel illustration: preserves the real parcel outline and building. */
+.gorna-parcel-art-link{
+  position:relative;
+  display:block;
+  width:100%;
+  height:280px;
+  min-height:240px;
+  overflow:hidden;
+  background:#222522;
+  border-top:1px solid rgba(230,224,211,.12);
+  text-decoration:none!important;
+}
+.gorna-parcel-art{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:none;
+  transition:transform .35s ease,filter .35s ease;
+}
+.gorna-parcel-art-link:hover .gorna-parcel-art{
+  transform:scale(1.025);
+  filter:brightness(1.06);
+}
+.gorna-parcel-art-zoom{
+  position:absolute;
+  right:10px;
+  bottom:10px;
+  display:inline-flex;
+  padding:7px 10px;
+  border:1px solid rgba(255,255,255,.34);
+  border-radius:2px;
+  background:rgba(17,18,17,.9);
+  color:#fff;
+  font:500 10px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.04em;
+  opacity:0;
+  transform:translateY(4px);
+  transition:opacity .2s ease,transform .2s ease;
+}
+.gorna-parcel-art-link:hover .gorna-parcel-art-zoom,
+.gorna-parcel-art-link:focus-visible .gorna-parcel-art-zoom{
+  opacity:1;
+  transform:translateY(0);
+}
+.gorna-parcel-art-link:focus-visible{
+  outline:2px solid #d7c7aa;
+  outline-offset:3px;
+}
+.gorna-location-actions .gorna-secondary-map-button,
+.gorna-location-actions .gorna-secondary-map-button:link,
+.gorna-location-actions .gorna-secondary-map-button:visited{
+  color:#fff!important;
+}
+@media(max-width:1000px){
+  .gorna-parcel-art-link{height:250px}
+}
+@media(max-width:809px){
+  .gorna-parcel-art-link{height:250px;min-height:220px}
+  .gorna-parcel-art-zoom{opacity:1;transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .gorna-parcel-art,.gorna-parcel-art-zoom{transition:none}
+}
