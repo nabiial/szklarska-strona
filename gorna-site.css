@@ -32,7 +32,7 @@
 .gorna-location-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 .gorna-location-actions .demo-map-button{display:inline-flex;align-items:center;gap:8px}
 .gorna-secondary-map-button{background:transparent!important;border:1px solid rgba(230,224,211,.35)!important}
-.framer-ifj41t{display:none!important}
+.framer-ifj41t{display:block!important;margin-top:24px}
 @media(max-width:809px){
  .gorna-language-switch{gap:8px;padding-left:8px}
  .gorna-language-switch a{font-size:9px}
@@ -123,4 +123,522 @@
   .gorna-image-lightbox__previous { left:8px; }
   .gorna-image-lightbox__next { right:8px; }
   .gorna-image-lightbox__button { width:40px; height:40px; }
+}
+
+/* Keep the original property photo gallery visible as a fallback and CMS lightbox target. */
+#residence .framer-ifj41t{display:block!important;}
+
+
+/* Static map fallback for the verified street address; cadastral boundaries remain in Geoportal. */
+.gorna-location-map{display:block;flex:1 1 auto;width:100%;height:420px;min-height:340px;border:0;background:#181818}
+@media(max-width:809px){.gorna-location-map{height:320px;min-height:260px}}
+
+
+/* Expandable high-contrast language selector */
+.gorna-language-switch{
+  position:relative!important;display:flex!important;align-items:center!important;
+  flex:0 0 auto!important;margin-left:auto!important;padding:0 0 0 16px!important;
+  white-space:nowrap!important;z-index:1000!important;
+}
+.gorna-language-trigger{
+  appearance:none!important;-webkit-appearance:none!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:10px!important;min-width:62px!important;min-height:40px!important;padding:9px 12px!important;
+  border:1px solid rgba(255,255,255,.48)!important;border-radius:3px!important;
+  background:rgba(18,18,18,.9)!important;color:#fff!important;
+  font:600 11px/1 "Manrope","Manrope Placeholder",sans-serif!important;letter-spacing:.14em!important;
+  cursor:pointer!important;box-shadow:0 3px 12px rgba(0,0,0,.18)!important;
+  transition:background .2s ease,border-color .2s ease!important;
+}
+.gorna-language-trigger:hover,.gorna-language-trigger[aria-expanded="true"]{
+  background:#242424!important;border-color:rgba(255,255,255,.78)!important;
+}
+.gorna-language-trigger:focus-visible,.gorna-language-panel a:focus-visible{
+  outline:2px solid #fff!important;outline-offset:3px!important;
+}
+.gorna-language-current{color:#fff!important}
+.gorna-language-chevron{
+  width:7px!important;height:7px!important;margin-top:-4px!important;
+  border-right:1.5px solid #fff!important;border-bottom:1.5px solid #fff!important;
+  transform:rotate(45deg)!important;transition:transform .2s ease!important;
+}
+.gorna-language-switch.is-open .gorna-language-chevron{margin-top:4px!important;transform:rotate(225deg)!important}
+.gorna-language-panel{
+  position:absolute!important;top:calc(100% + 10px)!important;right:0!important;
+  display:flex!important;flex-direction:column!important;gap:3px!important;
+  width:184px!important;padding:7px!important;box-sizing:border-box!important;
+  border:1px solid rgba(255,255,255,.22)!important;border-radius:4px!important;
+  background:rgba(17,17,17,.98)!important;box-shadow:0 14px 34px rgba(0,0,0,.42)!important;
+  opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+  transform:translateY(-8px)!important;
+  transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s!important;
+}
+.gorna-language-switch.is-open .gorna-language-panel{
+  opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important;
+  transition:opacity .2s ease,transform .2s ease,visibility 0s!important;
+}
+.gorna-language-panel a{
+  display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;
+  width:100%!important;min-height:40px!important;box-sizing:border-box!important;padding:10px 11px!important;
+  border-radius:2px!important;background:transparent!important;color:#fff!important;
+  text-decoration:none!important;font:500 12px/1.25 "Manrope","Manrope Placeholder",sans-serif!important;
+  letter-spacing:.025em!important;opacity:1!important;transition:background .16s ease!important;
+}
+.gorna-language-panel a:hover,.gorna-language-panel a[aria-current="page"]{background:#303030!important;color:#fff!important}
+.gorna-language-code{color:#ededed!important;font:600 10px/1 "Manrope","Manrope Placeholder",sans-serif!important;letter-spacing:.13em!important}
+@media(max-width:809px){
+  .gorna-language-switch{padding-left:8px!important}
+  .gorna-language-trigger{min-height:38px!important;padding:8px 10px!important}
+  .gorna-language-panel{top:calc(100% + 8px)!important;width:172px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .gorna-language-trigger,.gorna-language-chevron,.gorna-language-panel,.gorna-language-panel a{transition:none!important}
+}
+
+
+/* Contact enquiry form — matching the site's Manrope typography and dark palette */
+.gorna-contact-form{
+  width:100%;max-width:980px;box-sizing:border-box;margin-top:18px;padding:clamp(22px,3.8vw,38px);
+  border:1px solid rgba(230,224,211,.2);border-radius:3px;background:rgba(12,12,12,.36);
+  color:#f3efe8;font-family:"Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-contact-form-heading{margin:0 0 26px}
+.gorna-contact-form-heading h3{
+  margin:0 0 9px;color:#f3efe8;font:400 clamp(23px,2.5vw,32px)/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:-.7px;
+}
+.gorna-contact-form-heading p{
+  max-width:680px;margin:0;color:rgba(243,239,232,.72);
+  font:400 14px/1.75 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-contact-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px 22px}
+.gorna-contact-field{
+  min-width:0;display:flex;flex-direction:column;gap:8px;
+  color:#f3efe8;font:500 13px/1.4 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-contact-field span{color:#f3efe8}
+.gorna-contact-field em{color:#d6c6a8;font-style:normal}
+.gorna-contact-field input,.gorna-contact-field textarea{
+  width:100%;min-width:0;box-sizing:border-box;appearance:none;-webkit-appearance:none;
+  border:1px solid rgba(230,224,211,.26);border-radius:2px;background:rgba(0,0,0,.26);
+  color:#fff;padding:13px 14px;font:400 14px/1.5 "Manrope","Manrope Placeholder",sans-serif;
+  outline:none;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease;
+}
+.gorna-contact-field input{min-height:48px}
+.gorna-contact-field textarea{min-height:132px;resize:vertical}
+.gorna-contact-field input::placeholder,.gorna-contact-field textarea::placeholder{color:rgba(243,239,232,.45)}
+.gorna-contact-field input:focus,.gorna-contact-field textarea:focus{
+  border-color:rgba(230,224,211,.78);background:rgba(0,0,0,.38);box-shadow:0 0 0 2px rgba(230,224,211,.08);
+}
+.gorna-contact-field input:invalid:not(:placeholder-shown):not(:focus){border-color:#c78b83}
+.gorna-contact-field-wide{grid-column:1/-1}
+.gorna-contact-form-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:22px;flex-wrap:wrap}
+.gorna-contact-form-note{
+  max-width:570px;margin:0;color:rgba(243,239,232,.6);
+  font:400 11px/1.65 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-contact-submit{
+  display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:48px;
+  padding:12px 19px;border:1px solid #d7c7aa;border-radius:2px;background:#d7c7aa;color:#171613;
+  font:600 12px/1 "Manrope","Manrope Placeholder",sans-serif;letter-spacing:.035em;cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.gorna-contact-submit:hover{background:#e7dbc7;border-color:#e7dbc7;transform:translateY(-1px)}
+.gorna-contact-submit:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.gorna-contact-submit:disabled{opacity:.55;cursor:wait;transform:none}
+.gorna-contact-form-status{
+  margin:18px 0 0;padding:12px 14px;border:1px solid rgba(230,224,211,.22);
+  background:rgba(255,255,255,.045);color:#fff;font:400 13px/1.65 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-contact-form-status[hidden]{display:none!important}
+@media(max-width:809px){
+  .gorna-contact-form{padding:22px 18px;margin-top:12px}
+  .gorna-contact-form-grid{grid-template-columns:1fr;gap:16px}
+  .gorna-contact-field-wide{grid-column:auto}
+  .gorna-contact-form-footer{align-items:stretch;flex-direction:column}
+  .gorna-contact-submit{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .gorna-contact-field input,.gorna-contact-field textarea,.gorna-contact-submit{transition:none}
+}
+
+
+/* Keep the main property navigation visible while the page is being scrolled. */
+.framer-MKYZs > nav.framer-10x8oio{
+  position:sticky!important;
+  top:0!important;
+  z-index:10000!important;
+  width:100%!important;
+  box-sizing:border-box!important;
+  background-color:var(--token-fc16edd0-affb-456f-8870-2d4b031d5ef8)!important;
+  isolation:isolate;
+}
+@media(prefers-reduced-motion:reduce){
+  .framer-MKYZs > nav.framer-10x8oio{scroll-behavior:auto}
+}
+
+
+/* Location: official cadastral map, Google map and nearby attractions */
+.gorna-location-content{width:100%;margin-top:18px}
+.gorna-location-main-grid{
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(310px,.88fr);
+  gap:22px;align-items:stretch;width:100%;
+}
+.gorna-location-maps-column{display:grid;grid-template-columns:1fr;gap:18px;min-width:0}
+.gorna-location-card{
+  min-width:0;overflow:hidden;border:1px solid rgba(230,224,211,.2);
+  border-radius:3px;background:rgba(12,12,12,.34);
+}
+.gorna-location-card-heading{padding:18px 20px 15px}
+.gorna-location-kicker{
+  display:block;margin:0 0 8px;color:#c7b797;
+  font:600 10px/1.4 "Manrope","Manrope Placeholder",sans-serif;letter-spacing:.14em;
+}
+.gorna-location-card-heading h3,.gorna-nearby-heading h3{
+  margin:0;color:#f3efe8;font:400 clamp(19px,2vw,25px)/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:-.45px;
+}
+.gorna-location-card-heading p{
+  margin:7px 0 0;color:rgba(243,239,232,.62);
+  font:400 11px/1.6 "Manrope","Manrope Placeholder",sans-serif;overflow-wrap:anywhere;
+}
+.gorna-location-embed-wrap{
+  position:relative;width:100%;height:330px;min-height:280px;overflow:hidden;
+  background:#1d1d1b;border-top:1px solid rgba(230,224,211,.12);
+}
+.gorna-location-embed-wrap-google{height:300px;min-height:260px}
+.gorna-location-embed{
+  position:absolute;inset:0;display:block;width:100%;height:100%;border:0;
+  background:#1d1d1b;
+}
+.gorna-location-map-note{
+  margin:0;padding:11px 18px 14px;color:rgba(243,239,232,.58);
+  font:400 10px/1.65 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-nearby-panel{
+  min-width:0;padding:22px 22px 16px;border:1px solid rgba(230,224,211,.2);
+  border-radius:3px;background:rgba(12,12,12,.34);
+}
+.gorna-nearby-heading{margin:0 0 14px}
+.gorna-nearby-heading p{
+  margin:9px 0 0;color:rgba(243,239,232,.64);
+  font:400 12px/1.7 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-nearby-list{list-style:none;padding:0;margin:0}
+.gorna-nearby-item{
+  display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;
+  padding:15px 0;border-top:1px solid rgba(230,224,211,.14);
+}
+.gorna-nearby-number{
+  display:flex;align-items:flex-start;justify-content:center;padding-top:2px;
+  color:#c7b797;font:500 11px/1.5 "Manrope","Manrope Placeholder",sans-serif;letter-spacing:.08em;
+}
+.gorna-nearby-copy{min-width:0}
+.gorna-nearby-title-row{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+}
+.gorna-nearby-title-row h4{
+  margin:0;color:#f3efe8;font:500 14px/1.45 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-nearby-distance{
+  flex:0 0 auto;padding:4px 7px;border:1px solid rgba(215,199,170,.25);
+  border-radius:2px;color:#d7c7aa;font:500 10px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-nearby-copy p{
+  margin:6px 0 0;color:rgba(243,239,232,.66);
+  font:400 11px/1.65 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-nearby-directions{
+  display:inline-flex;align-items:center;gap:6px;margin-top:7px;
+  color:#d7c7aa!important;text-decoration:none!important;
+  font:500 10px/1.4 "Manrope","Manrope Placeholder",sans-serif;letter-spacing:.04em;
+}
+.gorna-nearby-directions:hover{text-decoration:underline!important;text-underline-offset:3px}
+.gorna-location-actions{margin-top:20px}
+.gorna-location-actions .demo-map-button{min-height:46px;padding:13px 18px}
+@media(max-width:1000px){
+  .gorna-location-main-grid{grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:16px}
+  .gorna-location-embed-wrap{height:300px}
+  .gorna-location-embed-wrap-google{height:280px}
+  .gorna-nearby-panel{padding:18px 16px 12px}
+}
+@media(max-width:809px){
+  .gorna-location-main-grid{grid-template-columns:1fr;gap:16px}
+  .gorna-location-embed-wrap{height:320px;min-height:250px}
+  .gorna-location-embed-wrap-google{height:280px;min-height:240px}
+  .gorna-nearby-panel{padding:20px 16px 12px}
+  .gorna-nearby-item{padding:13px 0}
+  .gorna-location-actions{flex-direction:column;align-items:stretch}
+  .gorna-location-actions .demo-map-button{justify-content:center;width:100%;box-sizing:border-box}
+}
+
+
+/* Official GUGiK KIEG map image and visible address marker */
+.gorna-kieg-map-stage{position:relative;isolation:isolate;background:#e9e5da;overflow:hidden}
+.gorna-kieg-map-image{display:block;width:100%;height:100%;object-fit:cover;background:#e9e5da}
+.gorna-kieg-map-marker{
+  position:absolute;left:50%;top:50%;z-index:2;display:flex;align-items:center;gap:8px;
+  transform:translate(-6px,-50%);pointer-events:none;
+}
+.gorna-kieg-map-marker span{
+  display:block;width:13px;height:13px;flex:0 0 13px;border:3px solid #fff;border-radius:50%;
+  background:#9a352b;box-shadow:0 1px 7px rgba(0,0,0,.55);
+}
+.gorna-kieg-map-marker b{
+  display:block;padding:6px 9px;border:1px solid rgba(255,255,255,.78);border-radius:2px;
+  background:rgba(24,24,24,.92);color:#fff;font:600 10px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 9px rgba(0,0,0,.25);
+}
+.gorna-kieg-map-source{
+  position:absolute;right:10px;bottom:10px;z-index:2;padding:5px 7px;
+  border:1px solid rgba(255,255,255,.65);border-radius:2px;
+  background:rgba(24,24,24,.86);color:#fff;font:500 9px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.08em;pointer-events:none;
+}
+.gorna-kieg-map-stage .gorna-geoportal-placeholder{
+  position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;
+}
+.gorna-kieg-map-stage .gorna-geoportal-placeholder[hidden]{display:none!important}
+.gorna-location-actions .gorna-secondary-map-button,
+.gorna-location-actions .gorna-secondary-map-button:link,
+.gorna-location-actions .gorna-secondary-map-button:visited{
+  background:rgba(215,199,170,.12)!important;
+  border:1px solid rgba(215,199,170,.7)!important;
+  color:#fff!important;
+  opacity:1!important;
+}
+.gorna-location-actions .gorna-secondary-map-button:hover{
+  background:#d7c7aa!important;border-color:#d7c7aa!important;color:#171613!important;
+}
+.gorna-location-actions .gorna-secondary-map-button:focus-visible{
+  outline:2px solid #fff!important;outline-offset:3px!important;
+}
+.gorna-nearby-item{grid-template-columns:28px minmax(0,1fr)}
+.gorna-nearby-panel{padding-bottom:20px}
+.gorna-nearby-copy p{max-width:640px}
+@media(max-width:809px){
+  .gorna-kieg-map-marker b{font-size:9px}
+  .gorna-kieg-map-marker{gap:6px}
+}
+
+
+/* Compact, balanced location layout: fixed-height maps beside a shorter 8-place list. */
+.gorna-location-main-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.04fr) minmax(320px,.96fr);
+  gap:22px;
+  align-items:start!important;
+}
+.gorna-location-maps-column{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  grid-auto-rows:min-content;
+  align-content:start;
+  align-self:start!important;
+  gap:14px;
+  min-width:0;
+  height:auto!important;
+}
+.gorna-location-card{
+  height:auto!important;
+  min-height:0!important;
+  align-self:start!important;
+}
+.gorna-kieg-map-stage{
+  position:relative!important;
+  width:100%!important;
+  height:280px!important;
+  min-height:240px!important;
+  overflow:hidden!important;
+  aspect-ratio:auto!important;
+  background:#e9e5da!important;
+  border-top:1px solid rgba(230,224,211,.12)!important;
+}
+.gorna-kieg-map-image{
+  display:block;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  background:#e9e5da;
+}
+.gorna-kieg-map-image[hidden]{display:none!important}
+.gorna-parcel-overlay{
+  display:block;
+  position:absolute;
+  inset:0;
+  z-index:2;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+.gorna-parcel-overlay[hidden]{display:none!important}
+.gorna-parcel-overlay path{
+  fill:#e54b3f;
+  fill-opacity:.26;
+  stroke:#d7352b;
+  stroke-width:4;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+  paint-order:stroke fill;
+}
+.gorna-kieg-map-loading{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  text-align:center;
+  color:#26231e;
+  background:#ece8de;
+  font:500 12px/1.6 "Manrope","Manrope Placeholder",sans-serif;
+}
+.gorna-kieg-map-loading[hidden]{display:none!important}
+.gorna-kieg-map-source{
+  position:absolute;
+  right:9px;
+  bottom:9px;
+  z-index:4;
+  padding:5px 7px;
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:2px;
+  background:rgba(24,24,24,.9);
+  color:#fff;
+  font:500 9px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.08em;
+  pointer-events:none;
+}
+.gorna-kieg-map-fallback{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5;
+  min-height:0!important;
+  height:auto!important;
+  padding:24px!important;
+  background:linear-gradient(135deg,#232323,#141414)!important;
+}
+.gorna-kieg-map-fallback[hidden]{display:none!important}
+.gorna-location-embed-wrap-google{
+  height:230px!important;
+  min-height:210px!important;
+  aspect-ratio:auto!important;
+}
+.gorna-location-embed-wrap-google .gorna-location-embed{height:100%!important}
+.gorna-location-map-note{
+  padding:9px 14px 12px!important;
+  font-size:10px!important;
+  line-height:1.55!important;
+}
+.gorna-nearby-panel{
+  align-self:start!important;
+  height:auto!important;
+  padding:20px 20px 14px!important;
+}
+.gorna-nearby-heading{margin-bottom:10px!important}
+.gorna-nearby-heading p{font-size:11px!important;line-height:1.6!important}
+.gorna-nearby-item{
+  padding:11px 0!important;
+  grid-template-columns:25px minmax(0,1fr)!important;
+  gap:9px!important;
+}
+.gorna-nearby-title-row h4{font-size:13px!important;line-height:1.35!important}
+.gorna-nearby-distance{font-size:9px!important;padding:3px 6px!important}
+.gorna-nearby-copy p{font-size:10.5px!important;line-height:1.5!important;margin-top:4px!important}
+.gorna-nearby-directions{font-size:9px!important;margin-top:5px!important}
+.gorna-location-actions .gorna-secondary-map-button,
+.gorna-location-actions .gorna-secondary-map-button:link,
+.gorna-location-actions .gorna-secondary-map-button:visited{
+  background:rgba(215,199,170,.12)!important;
+  border:1px solid rgba(215,199,170,.7)!important;
+  color:#fff!important;
+  opacity:1!important;
+}
+.gorna-location-actions .gorna-secondary-map-button:hover{
+  background:#d7c7aa!important;
+  border-color:#d7c7aa!important;
+  color:#171613!important;
+}
+@media(max-width:1000px){
+  .gorna-location-main-grid{grid-template-columns:minmax(0,1fr) minmax(290px,.95fr);gap:16px}
+  .gorna-kieg-map-stage{height:250px!important}
+  .gorna-location-embed-wrap-google{height:210px!important}
+  .gorna-nearby-panel{padding:17px 15px 12px!important}
+}
+@media(max-width:809px){
+  .gorna-location-main-grid{grid-template-columns:1fr!important;gap:16px}
+  .gorna-kieg-map-stage{height:250px!important;min-height:220px!important}
+  .gorna-location-embed-wrap-google{height:230px!important}
+  .gorna-nearby-panel{padding:20px 16px 12px!important}
+  .gorna-nearby-item{padding:12px 0!important}
+  .gorna-nearby-title-row h4{font-size:13px!important}
+}
+
+
+/* Screenshot-based parcel illustration: preserves the real parcel outline and building. */
+.gorna-parcel-art-link{
+  position:relative;
+  display:block;
+  width:100%;
+  height:280px;
+  min-height:240px;
+  overflow:hidden;
+  background:#222522;
+  border-top:1px solid rgba(230,224,211,.12);
+  text-decoration:none!important;
+}
+.gorna-parcel-art{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:none;
+  transition:transform .35s ease,filter .35s ease;
+}
+.gorna-parcel-art-link:hover .gorna-parcel-art{
+  transform:scale(1.025);
+  filter:brightness(1.06);
+}
+.gorna-parcel-art-zoom{
+  position:absolute;
+  right:10px;
+  bottom:10px;
+  display:inline-flex;
+  padding:7px 10px;
+  border:1px solid rgba(255,255,255,.34);
+  border-radius:2px;
+  background:rgba(17,18,17,.9);
+  color:#fff;
+  font:500 10px/1.2 "Manrope","Manrope Placeholder",sans-serif;
+  letter-spacing:.04em;
+  opacity:0;
+  transform:translateY(4px);
+  transition:opacity .2s ease,transform .2s ease;
+}
+.gorna-parcel-art-link:hover .gorna-parcel-art-zoom,
+.gorna-parcel-art-link:focus-visible .gorna-parcel-art-zoom{
+  opacity:1;
+  transform:translateY(0);
+}
+.gorna-parcel-art-link:focus-visible{
+  outline:2px solid #d7c7aa;
+  outline-offset:3px;
+}
+.gorna-location-actions .gorna-secondary-map-button,
+.gorna-location-actions .gorna-secondary-map-button:link,
+.gorna-location-actions .gorna-secondary-map-button:visited{
+  color:#fff!important;
+}
+@media(max-width:1000px){
+  .gorna-parcel-art-link{height:250px}
+}
+@media(max-width:809px){
+  .gorna-parcel-art-link{height:250px;min-height:220px}
+  .gorna-parcel-art-zoom{opacity:1;transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .gorna-parcel-art,.gorna-parcel-art-zoom{transition:none}
 }

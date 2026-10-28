@@ -1,54 +1,54 @@
 {
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=G%C3%B3rna+22%2C+Szklarska+Por%C4%99ba",
-  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyAddress=Szklarska%20Por%C4%99ba%2C%20G%C3%B3rna%2022",
-  "geoportalImage": "/assets/library/property/geoportal-parcel.webp",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=50.8460%2C15.5416",
+  "geoportalUrl": "https://mapy.geoportal.gov.pl/imapnext/imap/?identifyParcel=020604_1.0002.236%2F13",
+  "geoportalImage": "",
   "residenceGallery": [
     {
-      "src": "/assets/framerusercontent.com/images/cF19fl4mBNoIrUT0t6Sppilkg.00msyla.jpg",
+      "src": "/assets/library/property/property-01.jpg",
       "alt": {
-        "pl": "Widok domu od zewnątrz — zdjęcie testowe",
-        "en": "Exterior view of the house — test image",
-        "de": "Außenansicht des Hauses — Testbild"
+        "pl": "Widok domu od zewnątrz — 1",
+        "en": "Exterior view of the house — 1",
+        "de": "Außenansicht des Hauses — 1"
       }
     },
     {
-      "src": "/assets/framerusercontent.com/images/BpeWE9K54CscXbZBRd7gn9NCpc.02tlvqp.jpg",
+      "src": "/assets/library/property/property-02.jpg",
       "alt": {
-        "pl": "Wnętrze domu — zdjęcie testowe",
-        "en": "Interior of the house — test image",
-        "de": "Innenansicht des Hauses — Testbild"
+        "pl": "Wnętrze domu — 2",
+        "en": "Interior of the house — 2",
+        "de": "Innenansicht des Hauses — 2"
       }
     },
     {
-      "src": "/assets/framerusercontent.com/images/cF19fl4mBNoIrUT0t6Sppilkg.00msyla.jpg",
+      "src": "/assets/library/property/property-01.jpg",
       "alt": {
-        "pl": "Widok domu od zewnątrz — zdjęcie testowe",
-        "en": "Exterior view of the house — test image",
-        "de": "Außenansicht des Hauses — Testbild"
+        "pl": "Widok domu od zewnątrz — 3",
+        "en": "Exterior view of the house — 3",
+        "de": "Außenansicht des Hauses — 3"
       }
     },
     {
-      "src": "/assets/framerusercontent.com/images/BpeWE9K54CscXbZBRd7gn9NCpc.02tlvqp.jpg",
+      "src": "/assets/library/property/property-02.jpg",
       "alt": {
-        "pl": "Wnętrze domu — zdjęcie testowe",
-        "en": "Interior of the house — test image",
-        "de": "Innenansicht des Hauses — Testbild"
+        "pl": "Wnętrze domu — 4",
+        "en": "Interior of the house — 4",
+        "de": "Innenansicht des Hauses — 4"
       }
     },
     {
-      "src": "/assets/framerusercontent.com/images/cF19fl4mBNoIrUT0t6Sppilkg.00msyla.jpg",
+      "src": "/assets/library/property/property-01.jpg",
       "alt": {
-        "pl": "Widok domu od zewnątrz — zdjęcie testowe",
-        "en": "Exterior view of the house — test image",
-        "de": "Außenansicht des Hauses — Testbild"
+        "pl": "Widok domu od zewnątrz — 5",
+        "en": "Exterior view of the house — 5",
+        "de": "Außenansicht des Hauses — 5"
       }
     },
     {
-      "src": "/assets/framerusercontent.com/images/BpeWE9K54CscXbZBRd7gn9NCpc.02tlvqp.jpg",
+      "src": "/assets/library/property/property-02.jpg",
       "alt": {
-        "pl": "Wnętrze domu — zdjęcie testowe",
-        "en": "Interior of the house — test image",
-        "de": "Innenansicht des Hauses — Testbild"
+        "pl": "Wnętrze domu — 6",
+        "en": "Interior of the house — 6",
+        "de": "Innenansicht des Hauses — 6"
       }
     }
   ]
