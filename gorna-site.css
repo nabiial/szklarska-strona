@@ -758,3 +758,108 @@
   #demo-plan-lightbox .demo-lightbox-prev{left:2px}
   #demo-plan-lightbox .demo-lightbox-next{right:2px}
 }
+
+
+/* Restore the original three-card layout; enlarge only after opening a WebP plan */
+.gorna-floorplan-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  column-gap:18px!important;
+  row-gap:18px!important;
+}
+.gorna-floorplan-card:nth-child(3){
+  grid-column:auto!important;
+  width:auto!important;
+  justify-self:stretch!important;
+}
+#demo-plan-lightbox .demo-lightbox-panel{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  width:min(1500px,98vw);
+  height:min(96vh,1250px);
+  padding:48px 46px 46px;
+  overflow:hidden;
+  box-sizing:border-box;
+  background:#171a17;
+  border:1px solid rgba(215,199,170,.3);
+}
+#demo-plan-lightbox .demo-lightbox-viewer{
+  display:block;
+  flex:1 1 auto;
+  min-height:0;
+  width:100%;
+  overflow:auto;
+  overscroll-behavior:contain;
+  background:#171a17;
+  text-align:center;
+  scrollbar-color:#857c6b #20221e;
+}
+#demo-plan-lightbox .demo-lightbox-image{
+  display:block;
+  width:125%;
+  max-width:none;
+  max-height:none;
+  height:auto;
+  margin:0 auto;
+  object-fit:contain;
+  background:#171a17;
+}
+#demo-plan-lightbox .demo-lightbox-caption{
+  position:relative;
+  left:auto;
+  right:auto;
+  bottom:auto;
+  flex:0 0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px 16px;
+  min-height:42px;
+  padding:10px 0 0;
+  background:#171a17;
+  box-sizing:border-box;
+}
+#demo-plan-lightbox .demo-lightbox-zoom-controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+#demo-plan-lightbox .demo-lightbox-zoom-controls button{
+  min-width:34px;
+  height:30px;
+  padding:0 9px;
+  border:1px solid rgba(215,199,170,.4);
+  background:#22251f;
+  color:#f4efe4;
+  font:500 12px/1 "Manrope",sans-serif;
+  cursor:pointer;
+}
+#demo-plan-lightbox .demo-lightbox-zoom-controls button:disabled{
+  opacity:.35;
+  cursor:default;
+}
+#demo-plan-lightbox .demo-lightbox-zoom-controls span{
+  min-width:46px;
+  color:#d7c7aa;
+  text-align:center;
+  font:500 10px/1 "Manrope",sans-serif;
+}
+@media(max-width:1000px){
+  .gorna-floorplan-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:680px){
+  .gorna-floorplan-grid{grid-template-columns:1fr!important}
+  .gorna-floorplan-card:nth-child(3){grid-column:auto!important;width:100%!important}
+  #demo-plan-lightbox{padding:6px}
+  #demo-plan-lightbox .demo-lightbox-panel{
+    width:100%;
+    height:96vh;
+    padding:44px 10px 10px;
+  }
+  #demo-plan-lightbox .demo-lightbox-image{width:150%}
+  #demo-plan-lightbox .demo-lightbox-caption{align-items:flex-start}
+  #demo-plan-lightbox .demo-lightbox-zoom-controls{order:3;width:100%;justify-content:center}
+}
