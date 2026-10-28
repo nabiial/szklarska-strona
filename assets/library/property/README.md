@@ -4,19 +4,19 @@ W tym folderze umieszczaj zdjęcia wykorzystywane w galerii domu i poza galeriam
 
 ## Karuzela zdjęć domu
 
-Karuzela na stronie głównej pobiera kolejno sześć plików:
+Karuzela na stronie głównej pobiera kolejno sześć plików WebP:
 
-1. `property-01.jpg`
-2. `property-02.jpg`
-3. `property-03.jpg`
-4. `property-04.jpg`
-5. `property-05.jpg`
-6. `property-06.jpg`
+1. `property-01.webp`
+2. `property-02.webp`
+3. `property-03.webp`
+4. `property-04.webp`
+5. `property-05.webp`
+6. `property-06.webp`
 
 Wgraj je bezpośrednio do tego folderu: `assets/library/property/`.
-Nazwy i rozszerzenia muszą być dokładnie takie jak powyżej. Zdjęcia są wyświetlane w kolejności 01 → 06. Pliki 01 i 02 już istnieją i należy je zastąpić nowymi fotografiami.
+Nazwy i rozszerzenia muszą być dokładnie takie jak powyżej. Zdjęcia są wyświetlane w kolejności 01 → 06. Zastąp stare pliki JPG nowymi WebP; stare JPG mogą pozostać w folderze, ale nie będą używane przez karuzelę.
 
-Zalecany format: JPG lub WebP. Jeśli używasz WebP, trzeba zmienić rozszerzenia w `data/site-config.json` na `.webp`.
+Zdjęcia WebP działają w nowoczesnych przeglądarkach i są zalecanym formatem dla tej galerii.
 
 ## Mapa działki
 

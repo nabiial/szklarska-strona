@@ -4,7 +4,7 @@
   "geoportalImage": "",
   "residenceGallery": [
     {
-      "src": "/assets/library/property/property-01.jpg",
+      "src": "/assets/library/property/property-01.webp",
       "alt": {
         "pl": "Fotografia domu 1",
         "en": "House photo 1",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "src": "/assets/library/property/property-02.jpg",
+      "src": "/assets/library/property/property-02.webp",
       "alt": {
         "pl": "Fotografia domu 2",
         "en": "House photo 2",
@@ -20,7 +20,7 @@
       }
     },
     {
-      "src": "/assets/library/property/property-03.jpg",
+      "src": "/assets/library/property/property-03.webp",
       "alt": {
         "pl": "Fotografia domu 3",
         "en": "House photo 3",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "src": "/assets/library/property/property-04.jpg",
+      "src": "/assets/library/property/property-04.webp",
       "alt": {
         "pl": "Fotografia domu 4",
         "en": "House photo 4",
@@ -36,7 +36,7 @@
       }
     },
     {
-      "src": "/assets/library/property/property-05.jpg",
+      "src": "/assets/library/property/property-05.webp",
       "alt": {
         "pl": "Fotografia domu 5",
         "en": "House photo 5",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "src": "/assets/library/property/property-06.jpg",
+      "src": "/assets/library/property/property-06.webp",
       "alt": {
         "pl": "Fotografia domu 6",
         "en": "House photo 6",
