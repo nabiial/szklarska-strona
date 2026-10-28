@@ -1023,3 +1023,71 @@
   .gorna-property-video-grid{grid-template-columns:1fr;gap:28px}
   .gorna-shutters-feature{grid-template-columns:1fr;gap:22px}
 }
+
+
+/* Property videos — single centered column, aligned with the site's text measure */
+.gorna-property-videos{
+  width:min(100%, 900px)!important;
+  max-width:900px!important;
+  margin:clamp(42px,6vw,78px) auto clamp(48px,7vw,88px)!important;
+}
+.gorna-property-videos-heading{
+  max-width:900px;
+  margin:0 auto 26px!important;
+}
+.gorna-property-video-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:34px!important;
+  width:100%;
+  max-width:900px;
+  margin-inline:auto;
+}
+.gorna-property-video-card{
+  width:100%;
+  max-width:900px;
+  margin-inline:auto;
+}
+.gorna-property-video-frame{
+  width:100%;
+  aspect-ratio:16/9;
+}
+.gorna-shutters-feature{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  gap:20px!important;
+  width:100%;
+  max-width:900px;
+  margin:42px auto 0!important;
+  padding-top:32px!important;
+}
+.gorna-shutters-copy{
+  width:100%;
+  max-width:900px;
+}
+.gorna-shutters-copy p{
+  max-width:680px!important;
+}
+.gorna-shutters-video{
+  width:100%;
+  max-width:900px;
+}
+.gorna-shutters-video .gorna-property-video-card{
+  max-width:900px;
+}
+@media(max-width:700px){
+  .gorna-property-videos{
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .gorna-property-video-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:26px!important;
+  }
+  .gorna-shutters-feature{
+    gap:18px!important;
+    margin-top:34px!important;
+    padding-top:26px!important;
+  }
+}
