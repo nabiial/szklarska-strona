@@ -971,3 +971,55 @@
     top:calc(50% - 12px)!important;
   }
 }
+
+
+/* Property video presentation — two drone views followed by the roller-shutter feature */
+.gorna-property-videos{
+  width:100%;
+  margin:clamp(42px,6vw,78px) 0 clamp(48px,7vw,88px);
+  color:#eee9df;
+}
+.gorna-property-videos-heading{margin-bottom:24px}
+.gorna-property-videos-heading>span,
+.gorna-shutters-copy>span{
+  display:block;margin-bottom:12px;color:#baa98b;
+  font-size:10px;letter-spacing:.17em;text-transform:uppercase;
+}
+.gorna-property-videos-heading h2,
+.gorna-shutters-copy h2{
+  margin:0;color:#eee9df;font-size:clamp(25px,3.2vw,40px);
+  line-height:1.18;font-weight:400;letter-spacing:-.025em;
+}
+.gorna-property-video-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;
+}
+.gorna-property-video-card{min-width:0}
+.gorna-property-video-frame{
+  width:100%;aspect-ratio:16/9;overflow:hidden;background:#111;
+  border:1px solid rgba(230,224,211,.18);
+}
+.gorna-property-video-frame video{
+  display:block;width:100%;height:100%;object-fit:contain;background:#111;
+}
+.gorna-property-video-card h3{
+  margin:16px 0 7px;color:#eee9df;font-size:clamp(16px,1.6vw,20px);
+  line-height:1.35;font-weight:400;
+}
+.gorna-property-video-card p{
+  margin:0;color:#aaa69d;font-size:13px;line-height:1.7;
+}
+.gorna-shutters-feature{
+  display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+  align-items:center;gap:clamp(24px,4vw,54px);
+  margin-top:clamp(42px,6vw,68px);padding-top:clamp(28px,4vw,44px);
+  border-top:1px solid rgba(230,224,211,.18);
+}
+.gorna-shutters-copy p{
+  max-width:440px;margin:16px 0 0;color:#c3bdb2;font-size:14px;line-height:1.8;
+}
+.gorna-shutters-video .gorna-property-video-card h3{display:none}
+.gorna-shutters-video .gorna-property-video-card p{display:none}
+@media(max-width:700px){
+  .gorna-property-video-grid{grid-template-columns:1fr;gap:28px}
+  .gorna-shutters-feature{grid-template-columns:1fr;gap:22px}
+}
