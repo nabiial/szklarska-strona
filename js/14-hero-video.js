@@ -1,0 +1,76 @@
+/*
+ * GÓRNA 22A — DRONE VIDEO IN THE HERO
+ *
+ * To enable the background video:
+ * 1. Upload an optimized MP4 (H.264) to Cloudflare R2 or another public media host.
+ * 2. Paste its public HTTPS URL below into HERO_VIDEO_URL.
+ * 3. Commit this file. No HTML changes are needed afterwards.
+ *
+ * Keep the existing hero image in place: it is used as the poster/fallback.
+ * The video is muted, loops, plays inline, and respects reduced-motion/data-saver settings.
+ */
+(function () {
+  "use strict";
+
+  var HERO_VIDEO_URL = ""; // Example: https://media.your-domain.com/hero/gorna-22a-drone.mp4
+
+  if (!HERO_VIDEO_URL || !/^https:\/\//i.test(HERO_VIDEO_URL)) return;
+
+  var hero = document.querySelector(".framer-16pzmbf[data-framer-name='Property Cover']");
+  if (!hero || hero.querySelector(".gorna-hero-video")) return;
+
+  var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var saveData = connection && connection.saveData === true;
+
+  if (reducedMotion || saveData) return;
+
+  var wrapper = hero.querySelector("[data-framer-background-image-wrapper]");
+  var poster = wrapper && wrapper.querySelector("img");
+  if (!wrapper || !poster) return;
+
+  var video = document.createElement("video");
+  video.className = "gorna-hero-video";
+  video.setAttribute("aria-hidden", "true");
+  video.setAttribute("tabindex", "-1");
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+  video.setAttribute("muted", "");
+  video.muted = true;
+  video.defaultMuted = true;
+  video.autoplay = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.preload = "none";
+  video.disablePictureInPicture = true;
+  video.poster = poster.currentSrc || poster.src;
+  video.src = HERO_VIDEO_URL;
+
+  video.addEventListener("playing", function () {
+    hero.classList.add("gorna-hero-video-playing");
+  });
+
+  video.addEventListener("error", function () {
+    hero.classList.remove("gorna-hero-video-playing");
+    video.remove();
+  });
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      video.pause();
+      return;
+    }
+    if (!reducedMotion && !saveData) {
+      var playback = video.play();
+      if (playback && typeof playback.catch === "function") playback.catch(function () {});
+    }
+  });
+
+  wrapper.insertBefore(video, wrapper.firstChild);
+  var playback = video.play();
+  if (playback && typeof playback.catch === "function") {
+    playback.catch(function () {
+      hero.classList.remove("gorna-hero-video-playing");
+    });
+  }
+})();

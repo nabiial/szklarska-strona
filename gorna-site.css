@@ -863,3 +863,46 @@
   #demo-plan-lightbox .demo-lightbox-caption{align-items:flex-start}
   #demo-plan-lightbox .demo-lightbox-zoom-controls{order:3;width:100%;justify-content:center}
 }
+
+
+/* Górna 22A — hero drone video background (poster image remains as fallback) */
+.framer-3RWtH .framer-16pzmbf [data-framer-background-image-wrapper]{
+  z-index:0;
+  overflow:hidden;
+}
+.framer-3RWtH .framer-16pzmbf [data-framer-background-image-wrapper] > img{
+  position:relative;
+  z-index:0;
+  transition:opacity .7s ease;
+}
+.framer-3RWtH .framer-16pzmbf .gorna-hero-video{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:inherit;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .7s ease;
+}
+.framer-3RWtH .framer-16pzmbf.gorna-hero-video-playing .gorna-hero-video{
+  opacity:1;
+}
+.framer-3RWtH .framer-16pzmbf .framer-g21ll5{
+  z-index:2;
+}
+.framer-3RWtH .framer-16pzmbf .framer-3x2ujr{
+  z-index:3;
+}
+@media(prefers-reduced-motion:reduce){
+  .framer-3RWtH .framer-16pzmbf .gorna-hero-video{
+    display:none!important;
+  }
+  .framer-3RWtH .framer-16pzmbf [data-framer-background-image-wrapper] > img{
+    opacity:1!important;
+  }
+}
