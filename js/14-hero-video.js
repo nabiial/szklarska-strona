@@ -41,17 +41,24 @@
   video.autoplay = true;
   video.loop = true;
   video.playsInline = true;
-  video.preload = "none";
+  video.preload = "auto";
   video.disablePictureInPicture = true;
   video.poster = poster.currentSrc || poster.src;
   video.src = HERO_VIDEO_URL;
 
+  // Wait until the first decoded video frame is available before hiding the photo.
+  // This avoids blending two different aerial views during the handoff.
+  video.addEventListener("loadeddata", function () {
+    hero.classList.add("gorna-hero-video-ready");
+  });
+
   video.addEventListener("playing", function () {
+    hero.classList.add("gorna-hero-video-ready");
     hero.classList.add("gorna-hero-video-playing");
   });
 
   video.addEventListener("error", function () {
-    hero.classList.remove("gorna-hero-video-playing");
+    hero.classList.remove("gorna-hero-video-playing", "gorna-hero-video-ready");
     video.remove();
   });
 
@@ -70,7 +77,7 @@
   var playback = video.play();
   if (playback && typeof playback.catch === "function") {
     playback.catch(function () {
-      hero.classList.remove("gorna-hero-video-playing");
+      hero.classList.remove("gorna-hero-video-playing", "gorna-hero-video-ready");
     });
   }
 })();

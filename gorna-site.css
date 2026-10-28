@@ -906,3 +906,18 @@
     opacity:1!important;
   }
 }
+
+
+/* Prevent the old hero photo from blending into the drone footage.
+   Keep it as a fallback only until the video's first decoded frame is ready. */
+.framer-3RWtH .framer-16pzmbf.gorna-hero-video-ready [data-framer-background-image-wrapper] > img{
+  opacity:0!important;
+  transition:none!important;
+}
+.framer-3RWtH .framer-16pzmbf.gorna-hero-video-ready .gorna-hero-video{
+  opacity:1!important;
+  transition:none!important;
+}
+.framer-3RWtH .framer-16pzmbf.gorna-hero-video-ready.gorna-hero-video-playing .gorna-hero-video{
+  opacity:1!important;
+}
