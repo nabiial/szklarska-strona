@@ -11,6 +11,12 @@
   var prevButton = dialog.querySelector('[data-lightbox-prev]');
   var nextButton = dialog.querySelector('[data-lightbox-next]');
   var activeIndex = 0;
+  var language = (document.documentElement.getAttribute('lang') || 'pl').slice(0, 2).toLowerCase();
+  var labels = {
+    pl: { zoom: ' — kliknij, aby powiększyć', floor: 'Rzut kondygnacji', close: 'Zamknij powiększenie', previous: 'Poprzedni rzut', next: 'Następny rzut' },
+    en: { zoom: ' — select to enlarge', floor: 'Floor plan', close: 'Close enlarged plan', previous: 'Previous floor plan', next: 'Next floor plan' },
+    de: { zoom: ' — zum Vergrößern auswählen', floor: 'Grundriss', close: 'Vergrößerung schließen', previous: 'Vorheriger Grundriss', next: 'Nächster Grundriss' }
+  }[language] || { zoom: ' — select to enlarge', floor: 'Floor plan', close: 'Close enlarged plan', previous: 'Previous floor plan', next: 'Next floor plan' };
   var previouslyFocused = null;
   var previousOverflow = '';
 
@@ -18,7 +24,7 @@
     plan.setAttribute('role', 'button');
     plan.setAttribute('tabindex', '0');
     plan.setAttribute('aria-haspopup', 'dialog');
-    plan.setAttribute('aria-label', (plan.closest('.demo-plan-card') && plan.closest('.demo-plan-card').querySelector('h3') ? plan.closest('.demo-plan-card').querySelector('h3').textContent.trim() : 'Rzut kondygnacji') + ' — kliknij, aby powiększyć');
+    plan.setAttribute('aria-label', (plan.closest('.demo-plan-card') && plan.closest('.demo-plan-card').querySelector('h3') ? plan.closest('.demo-plan-card').querySelector('h3').textContent.trim() : labels.floor) + labels.zoom);
     plan.addEventListener('click', function () { openPlan(index); });
     plan.addEventListener('keydown', function (event) {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -34,8 +40,8 @@
     var card = thumb.closest('.demo-plan-card');
     var heading = card ? card.querySelector('h3') : null;
     largeImage.src = thumb.currentSrc || thumb.src;
-    largeImage.alt = thumb.alt || (heading ? heading.textContent.trim() : 'Rzut kondygnacji');
-    title.textContent = heading ? heading.textContent.trim() : 'Rzut kondygnacji';
+    largeImage.alt = thumb.alt || (heading ? heading.textContent.trim() : labels.floor);
+    title.textContent = heading ? heading.textContent.trim() : labels.floor;
     counter.textContent = (activeIndex + 1) + ' / ' + plans.length;
     prevButton.hidden = plans.length < 2;
     nextButton.hidden = plans.length < 2;
@@ -59,6 +65,10 @@
     if (previouslyFocused && typeof previouslyFocused.focus === 'function') previouslyFocused.focus();
   }
 
+  dialog.setAttribute('aria-label', labels.floor);
+  closeButton.setAttribute('aria-label', labels.close);
+  prevButton.setAttribute('aria-label', labels.previous);
+  nextButton.setAttribute('aria-label', labels.next);
   closeButton.addEventListener('click', closePlan);
   prevButton.addEventListener('click', function () { renderPlan(activeIndex - 1); });
   nextButton.addEventListener('click', function () { renderPlan(activeIndex + 1); });

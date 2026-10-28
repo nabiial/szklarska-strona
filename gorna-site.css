@@ -642,3 +642,49 @@
 @media(prefers-reduced-motion:reduce){
   .gorna-parcel-art,.gorna-parcel-art-zoom{transition:none}
 }
+
+
+/* Górna 22A — final floor-plan gallery, consistent with the dark site palette */
+.gorna-floorplan-section{display:block!important;padding:clamp(22px,3.5vw,42px)!important;margin:0!important;background:transparent!important}
+.gorna-floorplan-section .demo-extra-kicker{display:block;color:#d7c7aa!important;font-size:10px!important;letter-spacing:.17em!important}
+.gorna-floorplan-section .demo-extra-lead{max-width:720px;margin:13px 0 26px!important;color:rgba(240,236,226,.78)!important;font-size:13px!important;line-height:1.8!important}
+.gorna-floorplan-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;align-items:stretch}
+.gorna-floorplan-card{display:flex!important;flex-direction:column!important;min-width:0!important;padding:0!important;border:1px solid rgba(215,199,170,.24)!important;background:rgba(255,255,255,.025)!important;overflow:hidden}
+.gorna-floorplan-card .demo-plan-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:17px 17px 13px!important}
+.gorna-floorplan-card .demo-plan-number{display:block;color:#c8b99e!important;font-size:9px!important;line-height:1.5!important;letter-spacing:.12em!important}
+.gorna-floorplan-card .demo-plan-top h3{margin:8px 0 0!important;color:#f1ede3!important;font-family:"Manrope",sans-serif!important;font-size:18px!important;font-weight:400!important;line-height:1.35!important}
+.gorna-floorplan-card .demo-plan-size{flex:0 0 auto;color:#d7c7aa!important;font-size:11px!important;line-height:1.4!important}
+.gorna-floorplan-image{display:block!important;width:100%!important;height:auto!important;aspect-ratio:596/842!important;max-height:none!important;object-fit:contain!important;object-position:center!important;padding:8px!important;background:#171a17!important;box-sizing:border-box!important;cursor:zoom-in!important}
+.gorna-floorplan-card .demo-plan-footer{display:flex;justify-content:space-between;gap:12px;margin-top:auto;padding:13px 17px 15px!important;border-top:1px solid rgba(215,199,170,.16)!important;color:rgba(240,236,226,.7)!important;font-size:10px!important;line-height:1.6!important}
+.gorna-floorplan-download{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:24px;padding:18px 20px;border:1px solid rgba(215,199,170,.3);background:rgba(215,199,170,.07)}
+.gorna-floorplan-download-kicker{display:block;color:#d7c7aa;font:500 10px/1.5 "Manrope",sans-serif;letter-spacing:.15em}
+.gorna-floorplan-download p{margin:5px 0 0;color:rgba(240,236,226,.7);font:400 11px/1.5 "Manrope",sans-serif}
+.gorna-floorplan-download a{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 18px;background:#d7c7aa;color:#171613!important;text-decoration:none!important;font:600 11px/1.35 "Manrope",sans-serif;letter-spacing:.02em;transition:background .2s ease}
+.gorna-floorplan-download a:hover{background:#eee5d5}
+.gorna-floorplan-note{max-width:760px;margin:13px 0 0!important;color:rgba(240,236,226,.52)!important;font-size:10px!important;line-height:1.65!important}
+#demo-plan-lightbox{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(8,9,8,.94);box-sizing:border-box}
+#demo-plan-lightbox.is-open{display:flex}
+#demo-plan-lightbox .demo-lightbox-panel{position:relative;display:flex;align-items:center;justify-content:center;width:min(1100px,96vw);height:min(92vh,1000px);padding:48px 58px 62px;box-sizing:border-box;background:#171a17;border:1px solid rgba(215,199,170,.3)}
+#demo-plan-lightbox .demo-lightbox-image{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;background:#171a17}
+#demo-plan-lightbox .demo-lightbox-close,#demo-plan-lightbox .demo-lightbox-nav{position:absolute;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid rgba(215,199,170,.45);background:#22251f;color:#f4efe4;font:400 26px/1 "Manrope",sans-serif;cursor:pointer}
+#demo-plan-lightbox .demo-lightbox-close{top:10px;right:10px}
+#demo-plan-lightbox .demo-lightbox-prev{left:10px;top:50%;transform:translateY(-50%)}
+#demo-plan-lightbox .demo-lightbox-next{right:10px;top:50%;transform:translateY(-50%)}
+#demo-plan-lightbox .demo-lightbox-caption{position:absolute;left:58px;right:58px;bottom:18px;display:flex;justify-content:space-between;gap:16px;color:#e9e2d3;font:400 11px/1.5 "Manrope",sans-serif}
+#demo-plan-lightbox .demo-lightbox-counter{color:#c8b99e}
+@media(max-width:1000px){.gorna-floorplan-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:680px){
+ .gorna-floorplan-section{padding:20px 14px!important}
+ .gorna-floorplan-grid{grid-template-columns:1fr!important;gap:14px!important}
+ .gorna-floorplan-card .demo-plan-top{padding:14px 14px 11px!important}
+ .gorna-floorplan-image{max-height:none!important}
+ .gorna-floorplan-download{align-items:stretch;flex-direction:column;padding:16px}
+ .gorna-floorplan-download a{width:100%;box-sizing:border-box}
+ #demo-plan-lightbox{padding:8px}
+ #demo-plan-lightbox .demo-lightbox-panel{width:100%;height:94vh;padding:46px 36px 58px}
+ #demo-plan-lightbox .demo-lightbox-close,#demo-plan-lightbox .demo-lightbox-nav{width:34px;height:34px}
+ #demo-plan-lightbox .demo-lightbox-prev{left:2px}
+ #demo-plan-lightbox .demo-lightbox-next{right:2px}
+ #demo-plan-lightbox .demo-lightbox-caption{left:36px;right:36px;bottom:12px;font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.gorna-floorplan-download a{transition:none}}
