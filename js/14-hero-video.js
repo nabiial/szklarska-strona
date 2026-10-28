@@ -12,7 +12,7 @@
 (function () {
   "use strict";
 
-  var HERO_VIDEO_URL = ""; // Example: https://media.your-domain.com/hero/gorna-22a-drone.mp4
+  var HERO_VIDEO_URL = "https://pub-f288736ea0904e60ac1a937066c46821.r2.dev/hero/gorna-22a-drone.mp4"; // Cloudflare R2 public object URL
 
   if (!HERO_VIDEO_URL || !/^https:\/\//i.test(HERO_VIDEO_URL)) return;
 
