@@ -6,7 +6,7 @@
  * 2. Paste its public HTTPS URL below into HERO_VIDEO_URL.
  * 3. Commit this file. No HTML changes are needed afterwards.
  *
- * Keep the existing hero image in place: it is used as the poster/fallback.
+ * The old hero photo is removed. A dark background stays visible until video playback starts.
  * The video is muted, loops, plays inline, and respects reduced-motion/data-saver settings.
  */
 (function () {
@@ -26,8 +26,14 @@
   if (reducedMotion || saveData) return;
 
   var wrapper = hero.querySelector("[data-framer-background-image-wrapper]");
-  var poster = wrapper && wrapper.querySelector("img");
-  if (!wrapper || !poster) return;
+  if (!wrapper) return;
+
+  // Never show the former hero photograph, including while the video is loading or if playback fails.
+  var oldPhoto = wrapper.querySelector("img");
+  if (oldPhoto) oldPhoto.remove();
+  wrapper.style.backgroundImage = "none";
+  wrapper.style.backgroundColor = "#101110";
+  hero.style.backgroundColor = "#101110";
 
   var video = document.createElement("video");
   video.className = "gorna-hero-video";
@@ -43,7 +49,6 @@
   video.playsInline = true;
   video.preload = "auto";
   video.disablePictureInPicture = true;
-  video.poster = poster.currentSrc || poster.src;
   video.src = HERO_VIDEO_URL;
 
   // Wait until the first decoded video frame is available before hiding the photo.
