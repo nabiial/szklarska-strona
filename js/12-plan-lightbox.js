@@ -22,7 +22,7 @@
 
   dialog.dataset.initialized = 'true';
   var activeIndex = 0;
-  var zoom = 2;
+  var zoom = 1.25;
   var previouslyFocused = null;
   var previousOverflow = '';
   var language = (document.documentElement.getAttribute('lang') || 'pl').slice(0, 2).toLowerCase();
@@ -77,7 +77,7 @@
     counter.textContent = (activeIndex + 1) + ' / ' + plans.length;
     viewer.scrollTop = 0;
     viewer.scrollLeft = 0;
-    zoom = 2;
+    zoom = 1.25;
     renderZoom();
     prevButton.hidden = plans.length < 2;
     nextButton.hidden = plans.length < 2;
