@@ -948,3 +948,26 @@
     display:none!important;
   }
 }
+
+
+/* Residence carousel — center the controls on the image viewport, not on the
+   full carousel block (which also contains the counter below the image). */
+.gorna-residence-carousel .gorna-carousel-arrow{
+  top:calc(50% - 12px)!important;
+  display:grid!important;
+  place-items:center!important;
+  padding:0!important;
+  line-height:0!important;
+}
+.gorna-residence-carousel .gorna-carousel-arrow svg{
+  display:block;
+  width:22px;
+  height:22px;
+  margin:0;
+  flex:none;
+}
+@media(max-width:809px){
+  .gorna-residence-carousel .gorna-carousel-arrow{
+    top:calc(50% - 12px)!important;
+  }
+}
