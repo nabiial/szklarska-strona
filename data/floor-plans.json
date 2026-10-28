@@ -11,7 +11,7 @@
     "detail_en": "Pool · sauna · games room",
     "detail_de": "Pool · Sauna · Spielzimmer",
     "code": "139,36 m²",
-    "image": "/assets/library/floorplans/level-1.webp",
+    "image": "/assets/library/floorplans/level-1.svg",
     "sort_order": 1,
     "visible": true
   },
@@ -27,7 +27,7 @@
     "detail_en": "Living room · dining area · kitchen · garage",
     "detail_de": "Wohnzimmer · Essbereich · Küche · Garage",
     "code": "124,73 m²",
-    "image": "/assets/library/floorplans/level-2.webp",
+    "image": "/assets/library/floorplans/level-2.svg",
     "sort_order": 2,
     "visible": true
   },
@@ -43,7 +43,7 @@
     "detail_en": "Bedrooms · bathrooms",
     "detail_de": "Schlafzimmer · Badezimmer",
     "code": "116,66 m²",
-    "image": "/assets/library/floorplans/level-3.webp",
+    "image": "/assets/library/floorplans/level-3.svg",
     "sort_order": 3,
     "visible": true
   }
