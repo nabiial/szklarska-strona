@@ -45,17 +45,17 @@
       img.style.cssText='display:block;width:100%;height:100%;border-radius:inherit;object-fit:cover;object-position:center';
       imageWrap.appendChild(img);media.appendChild(imageWrap);link.appendChild(media);
 
-      var caption=document.createElement('div');caption.className='framer-i9qj0';caption.setAttribute('data-border','true');caption.setAttribute('data-framer-name','Room Caption');
+      var caption=document.createElement('div');caption.className='framer-i9qj0 cms-home-property-gallery__caption';caption.setAttribute('data-border','true');caption.setAttribute('data-framer-name','Room Caption');
       caption.style.cssText='--border-bottom-width:1px;--border-color:var(--token-24623156-2355-46f6-ad64-fee3da428f3f);--border-left-width:0px;--border-right-width:0px;--border-style:solid;--border-top-width:0px';
-      var nameWrap=document.createElement('div');nameWrap.className='framer-10bhym2';
+      var nameWrap=document.createElement('div');nameWrap.className='framer-10bhym2 cms-home-property-gallery__name';
       nameWrap.setAttribute('data-framer-component-type','RichTextContainer');
       var name=document.createElement('p');name.className='framer-text';name.dir='auto';name.textContent=T.card;
       name.style.cssText='--font-selector:RlM7TWFucm9wZS1yZWd1bGFy;--framer-font-family:"Manrope","Manrope Placeholder",sans-serif;--framer-font-size:22px;--framer-text-color:var(--token-a6bdeedf-9a67-47f1-9ad3-200b97319385)';
       nameWrap.appendChild(name);
-      var countWrap=document.createElement('div');countWrap.className='framer-nqtl28';countWrap.setAttribute('data-framer-component-type','RichTextContainer');
+      var countWrap=document.createElement('div');countWrap.className='framer-nqtl28 cms-home-property-gallery__count';countWrap.setAttribute('data-framer-component-type','RichTextContainer');
       var countText=document.createElement('p');countText.className='framer-text framer-styles-preset-1yn8miw';countText.setAttribute('data-styles-preset','hsXT0T6eW');countText.dir='auto';countText.textContent=count+' '+T.count;
       countWrap.appendChild(countText);
-      var arrow=document.createElementNS('http://www.w3.org/2000/svg','svg');arrow.setAttribute('class','framer-HfmfX framer-87klu4');arrow.setAttribute('role','presentation');arrow.setAttribute('viewBox','0 0 24 24');
+      var arrow=document.createElementNS('http://www.w3.org/2000/svg','svg');arrow.setAttribute('class','framer-HfmfX framer-87klu4 cms-home-property-gallery__arrow');arrow.setAttribute('role','presentation');arrow.setAttribute('viewBox','0 0 24 24');
       var use=document.createElementNS('http://www.w3.org/2000/svg','use');use.setAttribute('href','#1475982494');arrow.appendChild(use);
       caption.appendChild(nameWrap);caption.appendChild(countWrap);caption.appendChild(arrow);
       link.appendChild(caption);wrap.appendChild(link);cards.appendChild(wrap);section.appendChild(cards);
