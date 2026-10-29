@@ -84,8 +84,10 @@
     var viewport=element('div','gorna-carousel-viewport');
     var track=element('div','gorna-carousel-track');
     var entries=[];
+    var sourceOrder=vision.folder==='pension-spa'?[2,5,1,3,4]:Array.from({length:vision.count},function(_,i){return i+1;});
     for(var i=0;i<vision.count;i++){
-      var src='/assets/library/concepts/'+vision.folder+'/photo-'+String(i+1).padStart(2,'0')+'.webp';
+      var sourceNumber=sourceOrder[i]||i+1;
+      var src='/assets/library/concepts/'+vision.folder+'/photo-'+String(sourceNumber).padStart(2,'0')+'.webp';
       var slide=element('div','gorna-carousel-slide');
       var entry={src:src,alt:vision.title+' — '+T.photo+' '+(i+1),loaded:false,image:null,slide:slide,index:i};
       var img=element('img','gorna-potential-slide-image');
