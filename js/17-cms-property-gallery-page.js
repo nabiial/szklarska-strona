@@ -22,9 +22,10 @@
     if(titleEl)titleEl.textContent=T.title;
     if(kickerEl)kickerEl.textContent=T.kicker;
     if(descEl)descEl.textContent=T.description;
-    var nav=[['.framer-2c9i21 a','/',T.home],['.framer-1e43qci a','/#plans',T.plans],['.framer-rqvmn1 a','/#location',T.location],['.framer-15213yg a','/#potencjal',T.potential],['.framer-1i0cpt3 a','/#contact',T.contact]];
+    var homePath=lang==='en'?'/en/':lang==='de'?'/de/':'/';
+    var nav=[['.framer-2c9i21 a',homePath,T.home],['.framer-1e43qci a',homePath+'#plans',T.plans],['.framer-rqvmn1 a',homePath+'#location',T.location],['.framer-15213yg a',homePath+'#potencjal',T.potential],['.framer-1i0cpt3 a',homePath+'#contact',T.contact]];
     nav.forEach(function(n){var a=document.querySelector(n[0]);if(a){a.href=n[1];a.textContent=n[2];}});
-    var brand=document.querySelector('.framer-a44mph a');if(brand){brand.href='/';brand.textContent='GÓRNA / 22A';}
+    var brand=document.querySelector('.framer-a44mph a');if(brand){brand.href=homePath;brand.textContent='GÓRNA / 22A';}
     var disclaimer=document.querySelector('.framer-xrqur4 p');if(disclaimer)disclaimer.textContent=T.disclaimer;
 
     fetch('/data/property-detail-gallery.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(data){
