@@ -157,6 +157,31 @@ function syncPropertyGallery() {
   log('property-gallery.json synchronized (' + next.length + ' photos).');
 }
 
+function syncPropertyDetailGallery() {
+  const normalFiles = walkImages(path.join(ROOT_DIRS.property, 'normalne'), true);
+  const closeupFiles = walkImages(path.join(ROOT_DIRS.property, 'closeup'), true);
+  if (!normalFiles.length && !closeupFiles.length) {
+    log('property detail gallery unchanged (no images found).');
+    return;
+  }
+  const current = readJson('property-detail-gallery.json');
+  const existing = new Map(current.map(item => [item.image, item]));
+  function mapFiles(files) {
+    return files.map(file => {
+      const image = publicUrl(file);
+      const previous = existing.get(image);
+      if (previous) return Object.assign({}, previous, { image, visible: previous.visible !== false });
+      const title = generatedTitle(file);
+      return { title, title_en: title, title_de: title, alt: title, image, visible: true };
+    });
+  }
+  writeJson('property-detail-gallery.json', {
+    normal: mapFiles(normalFiles),
+    closeup: mapFiles(closeupFiles)
+  });
+  log('property-detail-gallery.json synchronized (normal=' + normalFiles.length + ', closeups=' + closeupFiles.length + ').');
+}
+
 function syncPlans() {
   const plans = readJson('floor-plans.json');
   let changed = 0;
@@ -201,6 +226,7 @@ function main() {
   for (const dir of Object.values(ROOT_DIRS)) fs.mkdirSync(dir, { recursive: true });
   syncRooms();
   syncPropertyGallery();
+  syncPropertyDetailGallery();
   syncPlans();
   syncConcepts();
   log('Done. Static files are ready to publish.');
