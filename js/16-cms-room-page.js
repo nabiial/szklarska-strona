@@ -73,24 +73,36 @@
       }
       container.innerHTML='';container.appendChild(gallery);
 
-      // Additional property-wide gallery, using the same room-gallery layout and lightbox.
-      var propertyPhotos = [
-        '/assets/library/property/property-01.webp',
-        '/assets/library/property/property-02.webp',
-        '/assets/library/property/property-03.webp',
-        '/assets/library/property/property-04.webp',
-        '/assets/library/property/property-05.webp',
-        '/assets/library/property/property-06.webp'
-      ];
+      // Additional property gallery: separate normalne/closeup folders, independent from the six-photo homepage carousel.
+      var propertyPhotos=[],propertyCloseupPhotos=[];
       var propertyGallery=document.createElement('div');propertyGallery.className='cms-room-gallery cms-room-gallery--property';
-      var propertyToolbar=document.createElement('div');propertyToolbar.className='cms-room-gallery__toolbar';
-      propertyToolbar.innerHTML='<span>'+escape(T.houseGallery)+'</span><span>'+propertyPhotos.length+' '+escape(T.photos)+'</span>';
-      propertyGallery.appendChild(propertyToolbar);
-      var propertyFeatured=document.createElement('button');propertyFeatured.type='button';propertyFeatured.className='cms-room-gallery__featured';propertyFeatured.setAttribute('data-cms-photo-index','0');propertyFeatured.setAttribute('aria-label',T.photo+' 1');
-      propertyFeatured.innerHTML='<img src="'+escape(propertyPhotos[0])+'" alt="'+escape(T.houseTitle)+' — '+escape(T.photo)+' 1" loading="lazy"><span class="cms-room-gallery__featured-label">01 / '+escape(T.houseTitle)+'</span>';
-      propertyGallery.appendChild(propertyFeatured);
-      addGrid(propertyGallery,propertyPhotos.slice(1),propertyPhotos,T.houseTitle,2);
-      gallery.appendChild(propertyGallery);
+      fetch('/data/property-detail-gallery.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(data){
+        propertyPhotos=(data.normal||[]).filter(function(x){return x.visible!==false&&x.image;}).map(function(x){return asset(x.image);});
+        propertyCloseupPhotos=(data.closeup||[]).filter(function(x){return x.visible!==false&&x.image;}).map(function(x){return asset(x.image);});
+        var allPropertyPhotos=unique(propertyPhotos.concat(propertyCloseupPhotos));
+        if(!allPropertyPhotos.length)return;
+        function appendPropertySection(label,photos){
+          if(!photos.length)return;
+          var section=document.createElement('div');section.className='cms-room-gallery__property-section';
+          var toolbar=document.createElement('div');toolbar.className='cms-room-gallery__toolbar';
+          toolbar.innerHTML='<span>'+escape(label)+'</span><span>'+photos.length+' '+escape(T.photos)+'</span>';
+          section.appendChild(toolbar);
+          var featured=document.createElement('button');featured.type='button';featured.className='cms-room-gallery__featured';featured.setAttribute('data-property-gallery','true');featured.setAttribute('data-property-index','0');featured.setAttribute('aria-label',T.photo+' 1');
+          featured.innerHTML='<img src="'+escape(photos[0])+'" alt="'+escape(T.houseTitle)+' — '+escape(T.photo)+' 1" loading="lazy"><span class="cms-room-gallery__featured-label">01 / '+escape(T.houseTitle)+'</span>';
+          section.appendChild(featured);
+          var grid=document.createElement('div');grid.className='cms-room-gallery__grid';
+          photos.slice(1).forEach(function(photo,i){
+            var btn=document.createElement('button');btn.type='button';btn.className='cms-room-gallery__item';btn.setAttribute('data-property-gallery','true');btn.setAttribute('data-property-index',String(i+1));btn.setAttribute('aria-label',T.photo+' '+(i+2));
+            btn.innerHTML='<img src="'+escape(photo)+'" alt="'+escape(T.houseTitle)+' — '+(i+2)+'" loading="lazy"><span>'+String(i+2).padStart(2,'0')+' / '+String(photos.length).padStart(2,'0')+'</span>';
+            grid.appendChild(btn);
+          });
+          if(photos.length>1)section.appendChild(grid);
+          propertyGallery.appendChild(section);
+        }
+        appendPropertySection(T.houseGallery,propertyPhotos);
+        appendPropertySection(T.closeups,propertyCloseupPhotos);
+        gallery.appendChild(propertyGallery);
+      }).catch(function(err){console.error('[Property gallery]',err);});
 
       // Localized navigation back to the homepage sections.
       var nav=[['.framer-2c9i21 a','',T.back],['.framer-1e43qci a','/#plans',T.plans],['.framer-rqvmn1 a','/#location',T.location],['.framer-15213yg a','/#potencjal',T.potential],['.framer-1i0cpt3 a','/#contact',T.contact]];
@@ -105,7 +117,8 @@
       function render(){if(!activePhotoList.length)return;index=(index+activePhotoList.length)%activePhotoList.length;lbImg.src=asset(activePhotoList[index]);lbImg.alt=(activePhotoList===propertyPhotos?T.houseTitle:title)+' — '+(index+1);counter.textContent=(index+1)+' / '+activePhotoList.length;}
       function open(i,list){activePhotoList=list||photoList;if(!activePhotoList.length)return;index=i;render();lb.classList.add('is-open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
       function close(){lb.classList.remove('is-open');lb.setAttribute('aria-hidden','true');lbImg.removeAttribute('src');document.body.style.overflow='';}
-      container.querySelectorAll('[data-cms-photo-index]').forEach(function(btn){btn.addEventListener('click',function(){var propertyGalleryButton=btn.closest('.cms-room-gallery--property');open(Number(btn.getAttribute('data-cms-photo-index'))||0,propertyGalleryButton?propertyPhotos:photoList);});});
+      container.querySelectorAll('[data-cms-photo-index]').forEach(function(btn){btn.addEventListener('click',function(){open(Number(btn.getAttribute('data-cms-photo-index'))||0,photoList);});});
+      container.addEventListener('click',function(e){var btn=e.target.closest('[data-property-gallery="true"]');if(!btn)return;var section=btn.closest('.cms-room-gallery__property-section');var isCloseup=section&&section.querySelector('.cms-room-gallery__toolbar span')&&section.querySelector('.cms-room-gallery__toolbar span').textContent===T.closeups;open(Number(btn.getAttribute('data-property-index'))||0,isCloseup?propertyCloseupPhotos:propertyPhotos);});
       lb.querySelector('.cms-room-lightbox__close').addEventListener('click',close);
       lb.querySelector('.cms-room-lightbox__prev').addEventListener('click',function(){index--;render();});
       lb.querySelector('.cms-room-lightbox__next').addEventListener('click',function(){index++;render();});
