@@ -23,3 +23,10 @@
 .cms-room-error { padding:24px; border:1px solid rgba(255,255,255,.2); color:#eee; font:400 14px/1.7 "Manrope",sans-serif; }
 @media (max-width:809px) { .cms-room-gallery__grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } .cms-room-gallery__featured img { min-height:200px; } .cms-room-lightbox { padding:52px 14px; } .cms-room-lightbox__prev { left:8px; } .cms-room-lightbox__next { right:8px; } }
 @media (max-width:480px) { .cms-room-gallery__grid { grid-template-columns:1fr; } .cms-room-gallery__item img { aspect-ratio:1.5/1; } }
+
+
+/* Homepage gallery of the whole property, placed below the four room cards in the final floor section. */
+.cms-home-property-gallery{margin:54px 0 0;padding:28px 0 0;border-top:1px solid rgba(230,224,211,.2)}
+.cms-home-property-gallery__title{margin:0 0 20px;color:#f4f3ef;font:400 clamp(22px,2vw,28px)/1.25 "Manrope","Manrope Placeholder",sans-serif;letter-spacing:-.025em}
+.cms-home-property-gallery .cms-room-gallery__toolbar{margin-bottom:0}
+@media(max-width:809px){.cms-home-property-gallery{margin-top:38px;padding-top:22px}}
