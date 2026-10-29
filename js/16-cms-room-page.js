@@ -11,9 +11,9 @@
   function escape(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function unique(list){var out=[];list.forEach(function(p){if(p&&out.indexOf(p)===-1)out.push(p)});return out}
   var T={
-    pl:{kicker:'POMIESZCZENIE / GALERIA SZCZEGÓŁOWA',photos:'zdjęć',photo:'Zdjęcie',empty:'Galeria zostanie uzupełniona kolejnymi fotografiami.',closeups:'Detale i zbliżenia',back:'Dom',plans:'Rzuty',location:'Lokalizacja',potential:'Potencjał',contact:'Kontakt',disclaimer:'Prezentacja nieruchomości · Informacje i fotografie pomieszczenia można uzupełniać w bibliotece zdjęć.'},
-    en:{kicker:'ROOM / DETAILED GALLERY',photos:'photos',photo:'Photo',empty:'More photos will be added to this gallery.',closeups:'Details and close-ups',back:'Property',plans:'Floor plans',location:'Location',potential:'Potential',contact:'Contact',disclaimer:'Property presentation · Room information and photographs can be updated in the photo library.'},
-    de:{kicker:'RAUM / DETAILGALERIE',photos:'Fotos',photo:'Foto',empty:'Weitere Fotos werden dieser Galerie hinzugefügt.',closeups:'Details und Nahaufnahmen',back:'Immobilie',plans:'Grundrisse',location:'Lage',potential:'Potenzial',contact:'Kontakt',disclaimer:'Immobilienpräsentation · Raumdaten und Fotos können in der Fotobibliothek aktualisiert werden.'}
+    pl:{kicker:'POMIESZCZENIE / GALERIA SZCZEGÓŁOWA',photos:'zdjęć',photo:'Zdjęcie',empty:'Galeria zostanie uzupełniona kolejnymi fotografiami.',closeups:'Detale i zbliżenia',houseGallery:'DODATKOWE ZDJĘCIA DOMU',houseTitle:'Górna 22A',back:'Dom',plans:'Rzuty',location:'Lokalizacja',potential:'Potencjał',contact:'Kontakt',disclaimer:'Prezentacja nieruchomości · Informacje i fotografie pomieszczenia można uzupełniać w bibliotece zdjęć.'},
+    en:{kicker:'ROOM / DETAILED GALLERY',photos:'photos',photo:'Photo',empty:'More photos will be added to this gallery.',closeups:'Details and close-ups',houseGallery:'ADDITIONAL HOUSE PHOTOS',houseTitle:'Górna 22A',back:'Property',plans:'Floor plans',location:'Location',potential:'Potential',contact:'Contact',disclaimer:'Property presentation · Room information and photographs can be updated in the photo library.'},
+    de:{kicker:'RAUM / DETAILGALERIE',photos:'Fotos',photo:'Foto',empty:'Weitere Fotos werden dieser Galerie hinzugefügt.',closeups:'Details und Nahaufnahmen',houseGallery:'WEITERE FOTOS DES HAUSES',houseTitle:'Górna 22A',back:'Immobilie',plans:'Grundrisse',location:'Lage',potential:'Potenzial',contact:'Kontakt',disclaimer:'Immobilienpräsentation · Raumdaten und Fotos können in der Fotobibliothek aktualisiert werden.'}
   }[lang];
   function addGrid(gallery, paths, photoList, title, startNumber){
     if(!paths.length)return;
@@ -73,6 +73,25 @@
       }
       container.innerHTML='';container.appendChild(gallery);
 
+      // Additional property-wide gallery, using the same room-gallery layout and lightbox.
+      var propertyPhotos = [
+        '/assets/library/property/property-01.webp',
+        '/assets/library/property/property-02.webp',
+        '/assets/library/property/property-03.webp',
+        '/assets/library/property/property-04.webp',
+        '/assets/library/property/property-05.webp',
+        '/assets/library/property/property-06.webp'
+      ];
+      var propertyGallery=document.createElement('div');propertyGallery.className='cms-room-gallery cms-room-gallery--property';
+      var propertyToolbar=document.createElement('div');propertyToolbar.className='cms-room-gallery__toolbar';
+      propertyToolbar.innerHTML='<span>'+escape(T.houseGallery)+'</span><span>'+propertyPhotos.length+' '+escape(T.photos)+'</span>';
+      propertyGallery.appendChild(propertyToolbar);
+      var propertyFeatured=document.createElement('button');propertyFeatured.type='button';propertyFeatured.className='cms-room-gallery__featured';propertyFeatured.setAttribute('data-cms-photo-index','0');propertyFeatured.setAttribute('aria-label',T.photo+' 1');
+      propertyFeatured.innerHTML='<img src="'+escape(propertyPhotos[0])+'" alt="'+escape(T.houseTitle)+' — '+escape(T.photo)+' 1" loading="lazy"><span class="cms-room-gallery__featured-label">01 / '+escape(T.houseTitle)+'</span>';
+      propertyGallery.appendChild(propertyFeatured);
+      addGrid(propertyGallery,propertyPhotos.slice(1),propertyPhotos,T.houseTitle,2);
+      gallery.appendChild(propertyGallery);
+
       // Localized navigation back to the homepage sections.
       var nav=[['.framer-2c9i21 a','',T.back],['.framer-1e43qci a','/#plans',T.plans],['.framer-rqvmn1 a','/#location',T.location],['.framer-15213yg a','/#potencjal',T.potential],['.framer-1i0cpt3 a','/#contact',T.contact]];
       nav.forEach(function(n){var a=document.querySelector(n[0]);if(a){a.href=n[1]||'/';a.textContent=n[2];}});
@@ -82,11 +101,11 @@
       // One lightbox for the full gallery, including detail close-ups.
       var lb=document.createElement('div');lb.className='cms-room-lightbox';lb.setAttribute('aria-hidden','true');
       lb.innerHTML='<button type="button" class="cms-room-lightbox__btn cms-room-lightbox__close" aria-label="Close">×</button><button type="button" class="cms-room-lightbox__btn cms-room-lightbox__prev" aria-label="Previous">‹</button><img class="cms-room-lightbox__image" alt=""><button type="button" class="cms-room-lightbox__btn cms-room-lightbox__next" aria-label="Next">›</button><span class="cms-room-lightbox__counter"></span>';
-      document.body.appendChild(lb);var lbImg=lb.querySelector('img'),counter=lb.querySelector('.cms-room-lightbox__counter'),index=0;
-      function render(){if(!photoList.length)return;index=(index+photoList.length)%photoList.length;lbImg.src=asset(photoList[index]);lbImg.alt=title+' — '+(index+1);counter.textContent=(index+1)+' / '+photoList.length;}
-      function open(i){if(!photoList.length)return;index=i;render();lb.classList.add('is-open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+      document.body.appendChild(lb);var lbImg=lb.querySelector('img'),counter=lb.querySelector('.cms-room-lightbox__counter'),index=0,activePhotoList=photoList;
+      function render(){if(!activePhotoList.length)return;index=(index+activePhotoList.length)%activePhotoList.length;lbImg.src=asset(activePhotoList[index]);lbImg.alt=(activePhotoList===propertyPhotos?T.houseTitle:title)+' — '+(index+1);counter.textContent=(index+1)+' / '+activePhotoList.length;}
+      function open(i,list){activePhotoList=list||photoList;if(!activePhotoList.length)return;index=i;render();lb.classList.add('is-open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
       function close(){lb.classList.remove('is-open');lb.setAttribute('aria-hidden','true');lbImg.removeAttribute('src');document.body.style.overflow='';}
-      container.querySelectorAll('[data-cms-photo-index]').forEach(function(btn){btn.addEventListener('click',function(){open(Number(btn.getAttribute('data-cms-photo-index'))||0);});});
+      container.querySelectorAll('[data-cms-photo-index]').forEach(function(btn){btn.addEventListener('click',function(){var propertyGalleryButton=btn.closest('.cms-room-gallery--property');open(Number(btn.getAttribute('data-cms-photo-index'))||0,propertyGalleryButton?propertyPhotos:photoList);});});
       lb.querySelector('.cms-room-lightbox__close').addEventListener('click',close);
       lb.querySelector('.cms-room-lightbox__prev').addEventListener('click',function(){index--;render();});
       lb.querySelector('.cms-room-lightbox__next').addEventListener('click',function(){index++;render();});
