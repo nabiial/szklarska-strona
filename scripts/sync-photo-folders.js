@@ -142,7 +142,7 @@ function syncRooms() {
 }
 
 function syncPropertyGallery() {
-  const files = walkImages(ROOT_DIRS.property, true);
+  const files = walkImages(ROOT_DIRS.property, false);
   if (!files.length) { log('property gallery unchanged (no images found).'); return; }
   const current = readJson('property-gallery.json');
   const byImage = new Map(current.map(item => [item.image, item]));
