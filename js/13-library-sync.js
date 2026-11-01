@@ -57,7 +57,9 @@
       if(h) h.textContent=subtitle;
       if(code) code.textContent=p.code||('RZUT '+String.fromCharCode(65+i));
       if(foot) foot.textContent=detail;
-      var img=card.querySelector('.demo-plan-image'); if(img){img.src=asset(p.image);img.removeAttribute('srcset');img.alt=subtitle+' — '+detail;img.dataset.libraryPlanSlug=p.slug||'';}
+      var img=card.querySelector('.demo-plan-image');
+      var imagePath=lang==='en'?(p.image_en||p.image):lang==='de'?(p.image_de||p.image):p.image;
+      if(img){img.src=asset(imagePath);img.removeAttribute('srcset');img.alt=subtitle+' — '+detail;img.dataset.libraryPlanSlug=p.slug||'';}
     });
   }
   function renderConceptCards(concepts) {

@@ -13,7 +13,9 @@
     "code": "139,36 m²",
     "image": "/assets/library/floorplans/level-1.svg",
     "sort_order": 1,
-    "visible": true
+    "visible": true,
+    "image_en": "/assets/library/floorplans/level-1-en.svg",
+    "image_de": "/assets/library/floorplans/level-1-de.svg"
   },
   {
     "slug": "parter-z-garazem",
@@ -29,7 +31,9 @@
     "code": "124,73 m²",
     "image": "/assets/library/floorplans/level-2.svg",
     "sort_order": 2,
-    "visible": true
+    "visible": true,
+    "image_en": "/assets/library/floorplans/level-2-en.svg",
+    "image_de": "/assets/library/floorplans/level-2-de.svg"
   },
   {
     "slug": "pietro",
@@ -45,6 +49,8 @@
     "code": "116,66 m²",
     "image": "/assets/library/floorplans/level-3.svg",
     "sort_order": 3,
-    "visible": true
+    "visible": true,
+    "image_en": "/assets/library/floorplans/level-3-en.svg",
+    "image_de": "/assets/library/floorplans/level-3-de.svg"
   }
 ]
