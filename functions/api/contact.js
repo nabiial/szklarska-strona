@@ -50,6 +50,9 @@ export async function onRequestPost({ request, env }) {
     const raw = await request.text();
     if (raw.length > 12000) return jsonResponse({ error: "Request is too large." }, 413);
     body = JSON.parse(raw);
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return jsonResponse({ error: "Invalid request body." }, 400);
+    }
   } catch (_) {
     return jsonResponse({ error: "Invalid request body." }, 400);
   }
