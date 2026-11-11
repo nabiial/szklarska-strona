@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+# Cloudflare Pages local secrets
+.dev.vars*
+.env*
