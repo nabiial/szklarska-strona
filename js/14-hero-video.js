@@ -27,9 +27,6 @@
   if (!wrapper) return;
 
   // Do not remove the original cover image: it is the fallback for failed video playback.
-  wrapper.style.backgroundImage = "none";
-  wrapper.style.backgroundColor = "#101110";
-  hero.style.backgroundColor = "#101110";
 
   var video = document.createElement("video");
   video.className = "gorna-hero-video";
