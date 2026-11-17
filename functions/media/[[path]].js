@@ -23,7 +23,7 @@ function parseSingleRange(header, size) {
   if (!header) return null;
 
   // Browsers normally request one range at a time for HTML video.
-  const match = /^bytes=(\\d*)-(\\d*)$/.exec(header.trim());
+  const match = /^bytes=(\d*)-(\d*)$/.exec(header.trim());
   if (!match) return { invalid: true };
 
   const startText = match[1];
