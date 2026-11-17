@@ -1,8 +1,8 @@
 const ALLOWED_MEDIA = new Set([
   "hero/gorna-22a-drone.mp4",
-  "property/drone-departure.mp4",
-  "property/drone-orbit.mp4",
-  "property/roller-shutters.mp4",
+  "property/Drone-Departure.mp4",
+  "property/Drone-Orbit.mp4",
+  "property/Roller-Shutters.mp4",
   "location/google-earth-overview.mp4",
 ]);
 
