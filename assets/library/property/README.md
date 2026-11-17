@@ -23,13 +23,13 @@ Zdjęcia WebP działają w nowoczesnych przeglądarkach i są zalecanym formatem
 Aktualny podgląd mapy działki jest zapisany jako `geoportal-parcel-preview.webp`.
 Nie dodawaj mapy z niepotwierdzonym przebiegiem granic działki.
 
-## Dodatkowa galeria domu (pod galeriami pomieszczeń)
+## Dodatkowe zdjęcia domu na stronie głównej
 
-Dodatkowe zdjęcia domu, wyświetlane na podstronach pomieszczeń (np. poddasza), dodawaj do dwóch folderów:
+Na stronie głównej, pod czterema kaflami pokoi w sekcji „Piętro”, widoczna jest tylko okładka z odnośnikiem. Po kliknięciu otwiera się pełna galeria ze zdjęciami ogólnymi i zbliżeniami. Dodawaj je do dwóch folderów:
 
 - `assets/library/property/normalne/` — zwykłe zdjęcia domu
 - `assets/library/property/closeup/` — detale i zbliżenia
 
 Wgraj dowolną liczbę zdjęć (JPG, JPEG, PNG, WebP lub AVIF). Nazwy plików mogą być dowolne. Kolejność jest alfabetyczna z uwzględnieniem numerów w nazwie. Podczas budowania strony skrypt synchronizuje te foldery z `data/property-detail-gallery.json`.
 
-Ta galeria jest niezależna od sześciu zdjęć `property-01.webp`–`property-06.webp` używanych w karuzeli na stronie głównej. Nie zmieniaj tych sześciu plików, jeśli chcesz zachować karuzelę bez zmian.
+Ta galeria jest niezależna od sześciu zdjęć `property-01.webp`–`property-06.webp` używanych w karuzeli na stronie głównej. Pełne zdjęcia są widoczne dopiero na podstronie galerii, a nie na stronie głównej ani w galeriach poszczególnych pokoi. Nie zmieniaj tych sześciu plików, jeśli chcesz zachować karuzelę bez zmian. Nie zmieniaj tych sześciu plików, jeśli chcesz zachować karuzelę bez zmian.

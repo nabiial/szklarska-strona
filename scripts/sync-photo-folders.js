@@ -159,13 +159,32 @@ function syncPropertyGallery() {
 
 function syncPropertyDetailGallery() {
   const normalFiles = walkImages(path.join(ROOT_DIRS.property, 'normalne'), true);
-  const closeupFiles = walkImages(path.join(ROOT_DIRS.property, 'closeup'), true);
-  if (!normalFiles.length && !closeupFiles.length) {
+  let closeupFiles = walkImages(path.join(ROOT_DIRS.property, 'closeup'), true);
+  const rootFiles = walkImages(ROOT_DIRS.property, false);
+  const coverFile = chooseCover(rootFiles, 'property');
+
+  if (!normalFiles.length && !closeupFiles.length && !coverFile) {
     log('property detail gallery unchanged (no images found).');
     return;
   }
+
   const current = readJson('property-detail-gallery.json');
-  const existing = new Map(current.map(item => [item.image, item]));
+  const previousItems = Array.isArray(current)
+    ? current
+    : [...(Array.isArray(current.normal) ? current.normal : []), ...(Array.isArray(current.closeup) ? current.closeup : [])];
+  const existing = new Map(previousItems.filter(item => item && item.image).map(item => [item.image, item]));
+
+  // The cover is displayed separately; avoid listing the same binary photo twice
+  // when a copy of it was also placed in the closeup folder.
+  if (coverFile) {
+    const coverSize = fs.statSync(coverFile).size;
+    const coverBuffer = fs.readFileSync(coverFile);
+    closeupFiles = closeupFiles.filter(file => {
+      if (fs.statSync(file).size !== coverSize) return true;
+      return !fs.readFileSync(file).equals(coverBuffer);
+    });
+  }
+
   function mapFiles(files) {
     return files.map(file => {
       const image = publicUrl(file);
@@ -175,11 +194,15 @@ function syncPropertyDetailGallery() {
       return { title, title_en: title, title_de: title, alt: title, image, visible: true };
     });
   }
+
+  const previousCover = current && !Array.isArray(current) ? current.cover : null;
+  const cover = coverFile ? publicUrl(coverFile) : (publicUrlExists(previousCover) ? previousCover : null);
   writeJson('property-detail-gallery.json', {
+    cover,
     normal: mapFiles(normalFiles),
     closeup: mapFiles(closeupFiles)
   });
-  log('property-detail-gallery.json synchronized (normal=' + normalFiles.length + ', closeups=' + closeupFiles.length + ').');
+  log('property-detail-gallery.json synchronized (cover=' + (cover ? 'yes' : 'no') + ', normal=' + normalFiles.length + ', closeups=' + closeupFiles.length + ').');
 }
 
 function syncPlans() {

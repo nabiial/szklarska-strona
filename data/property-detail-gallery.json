@@ -1,4 +1,223 @@
 {
-  "normal": [],
-  "closeup": []
+  "cover": "/assets/library/property/cover.webp",
+  "normal": [
+    {
+      "title": "DJI 20260926154221 0048 D",
+      "title_en": "DJI 20260926154221 0048 D",
+      "title_de": "DJI 20260926154221 0048 D",
+      "alt": "DJI 20260926154221 0048 D",
+      "image": "/assets/library/property/normalne/DJI_20260926154221_0048_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260926154429 0053 D",
+      "title_en": "DJI 20260926154429 0053 D",
+      "title_de": "DJI 20260926154429 0053 D",
+      "alt": "DJI 20260926154429 0053 D",
+      "image": "/assets/library/property/normalne/DJI_20260926154429_0053_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928095453 0138 D",
+      "title_en": "DJI 20260928095453 0138 D",
+      "title_de": "DJI 20260928095453 0138 D",
+      "alt": "DJI 20260928095453 0138 D",
+      "image": "/assets/library/property/normalne/DJI_20260928095453_0138_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928100022 0158 D",
+      "title_en": "DJI 20260928100022 0158 D",
+      "title_de": "DJI 20260928100022 0158 D",
+      "alt": "DJI 20260928100022 0158 D",
+      "image": "/assets/library/property/normalne/DJI_20260928100022_0158_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928100118 0159 D",
+      "title_en": "DJI 20260928100118 0159 D",
+      "title_de": "DJI 20260928100118 0159 D",
+      "alt": "DJI 20260928100118 0159 D",
+      "image": "/assets/library/property/normalne/DJI_20260928100118_0159_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928112337 0173 D",
+      "title_en": "DJI 20260928112337 0173 D",
+      "title_de": "DJI 20260928112337 0173 D",
+      "alt": "DJI 20260928112337 0173 D",
+      "image": "/assets/library/property/normalne/DJI_20260928112337_0173_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928120431 0179 D",
+      "title_en": "DJI 20260928120431 0179 D",
+      "title_de": "DJI 20260928120431 0179 D",
+      "alt": "DJI 20260928120431 0179 D",
+      "image": "/assets/library/property/normalne/DJI_20260928120431_0179_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928120439 0180 D",
+      "title_en": "DJI 20260928120439 0180 D",
+      "title_de": "DJI 20260928120439 0180 D",
+      "alt": "DJI 20260928120439 0180 D",
+      "image": "/assets/library/property/normalne/DJI_20260928120439_0180_D.webp",
+      "visible": true
+    },
+    {
+      "title": "DJI 20260928120444 0181 D",
+      "title_en": "DJI 20260928120444 0181 D",
+      "title_de": "DJI 20260928120444 0181 D",
+      "alt": "DJI 20260928120444 0181 D",
+      "image": "/assets/library/property/normalne/DJI_20260928120444_0181_D.webp",
+      "visible": true
+    }
+  ],
+  "closeup": [
+    {
+      "title": "6E8A6084",
+      "title_en": "6E8A6084",
+      "title_de": "6E8A6084",
+      "alt": "6E8A6084",
+      "image": "/assets/library/property/closeup/6E8A6084.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6093",
+      "title_en": "6E8A6093",
+      "title_de": "6E8A6093",
+      "alt": "6E8A6093",
+      "image": "/assets/library/property/closeup/6E8A6093.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6114",
+      "title_en": "6E8A6114",
+      "title_de": "6E8A6114",
+      "alt": "6E8A6114",
+      "image": "/assets/library/property/closeup/6E8A6114.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6150",
+      "title_en": "6E8A6150",
+      "title_de": "6E8A6150",
+      "alt": "6E8A6150",
+      "image": "/assets/library/property/closeup/6E8A6150.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6198",
+      "title_en": "6E8A6198",
+      "title_de": "6E8A6198",
+      "alt": "6E8A6198",
+      "image": "/assets/library/property/closeup/6E8A6198.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6234",
+      "title_en": "6E8A6234",
+      "title_de": "6E8A6234",
+      "alt": "6E8A6234",
+      "image": "/assets/library/property/closeup/6E8A6234.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6251",
+      "title_en": "6E8A6251",
+      "title_de": "6E8A6251",
+      "alt": "6E8A6251",
+      "image": "/assets/library/property/closeup/6E8A6251.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6269",
+      "title_en": "6E8A6269",
+      "title_de": "6E8A6269",
+      "alt": "6E8A6269",
+      "image": "/assets/library/property/closeup/6E8A6269.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6282",
+      "title_en": "6E8A6282",
+      "title_de": "6E8A6282",
+      "alt": "6E8A6282",
+      "image": "/assets/library/property/closeup/6E8A6282.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6290",
+      "title_en": "6E8A6290",
+      "title_de": "6E8A6290",
+      "alt": "6E8A6290",
+      "image": "/assets/library/property/closeup/6E8A6290.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6298",
+      "title_en": "6E8A6298",
+      "title_de": "6E8A6298",
+      "alt": "6E8A6298",
+      "image": "/assets/library/property/closeup/6E8A6298.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6310",
+      "title_en": "6E8A6310",
+      "title_de": "6E8A6310",
+      "alt": "6E8A6310",
+      "image": "/assets/library/property/closeup/6E8A6310.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6315",
+      "title_en": "6E8A6315",
+      "title_de": "6E8A6315",
+      "alt": "6E8A6315",
+      "image": "/assets/library/property/closeup/6E8A6315.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6347",
+      "title_en": "6E8A6347",
+      "title_de": "6E8A6347",
+      "alt": "6E8A6347",
+      "image": "/assets/library/property/closeup/6E8A6347.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6348",
+      "title_en": "6E8A6348",
+      "title_de": "6E8A6348",
+      "alt": "6E8A6348",
+      "image": "/assets/library/property/closeup/6E8A6348.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6349",
+      "title_en": "6E8A6349",
+      "title_de": "6E8A6349",
+      "alt": "6E8A6349",
+      "image": "/assets/library/property/closeup/6E8A6349.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6350",
+      "title_en": "6E8A6350",
+      "title_de": "6E8A6350",
+      "alt": "6E8A6350",
+      "image": "/assets/library/property/closeup/6E8A6350.webp",
+      "visible": true
+    },
+    {
+      "title": "6E8A6352",
+      "title_en": "6E8A6352",
+      "title_de": "6E8A6352",
+      "alt": "6E8A6352",
+      "image": "/assets/library/property/closeup/6E8A6352.webp",
+      "visible": true
+    }
+  ]
 }
