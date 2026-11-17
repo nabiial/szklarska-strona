@@ -61,14 +61,11 @@
         gallery.appendChild(featured);
       }
       var mainOthers=normalPhotos.filter(function(p){return p!==cover;});
-      addGrid(gallery,mainOthers,photoList,title,2);
-      if(closeupPhotos.length){
-        var heading=document.createElement('div');heading.className='cms-room-gallery__section-title';
-        heading.innerHTML='<span>02 /</span> '+escape(T.closeups);
-        gallery.appendChild(heading);
-        addGrid(gallery,closeupPhotos,photoList,title,Math.max(2,mainOthers.length+2));
-      }
-      if(!mainOthers.length&&!closeupPhotos.length){
+      // Keep one continuous gallery: regular photos first, then close-ups.
+      // The cover remains the featured first image and is never duplicated in the grid.
+      var allOthers=unique(mainOthers.concat(closeupPhotos)).filter(function(p){return p!==cover;});
+      addGrid(gallery,allOthers,photoList,title,2);
+      if(!allOthers.length){
         var empty=document.createElement('div');empty.className='cms-room-gallery__empty';empty.textContent=T.empty;gallery.appendChild(empty);
       }
       container.innerHTML='';container.appendChild(gallery);
