@@ -12,7 +12,7 @@ Pełna instrukcja: `README-AUTOMATYCZNE-ZDJECIA.md`.
 - `assets/library/concepts/<slug>/` — wizualizacje koncepcji z sekcji „Potencjał”.
 - `scripts/sync-photo-folders.js` — skanuje powyższe foldery i aktualizuje dane `data/*.json` przed wdrożeniem.
 - `js/13-library-sync.js` — wyświetla dane galerii na stronie głównej.
-- `js/16-cms-room-page.js` — tworzy stronę galerii pokoju, w tym osobną sekcję zbliżeń.
+- `js/16-cms-room-page.js` — tworzy jedną ciągłą galerię pokoju: najpierw zdjęcia główne, następnie zdjęcia z folderu `closeup`.
 
 ## Jednorazowa konfiguracja Cloudflare Pages
 
