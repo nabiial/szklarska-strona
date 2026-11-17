@@ -47,7 +47,7 @@ assets/library/rooms/basen/
     armatura.webp
 ```
 
-Zdjęcia z folderu `normalne` (oraz pliki wrzucone bezpośrednio do folderu pokoju) trafią do głównej galerii. Zdjęcia w `closeup` pojawią się w osobnej sekcji **Detale i zbliżenia**. Nie trzeba numerować plików.
+Zdjęcia z folderu `normalne` (oraz pliki wrzucone bezpośrednio do folderu pokoju) pojawią się w galerii jako pierwsze. Zdjęcia z `closeup` zostaną wyświetlone zaraz po nich — wszystkie fotografie tworzą jedną ciągłą galerię, bez osobnej sekcji i nagłówka zbliżeń. Nie trzeba numerować plików.
 
 ## Zdjęcia domu i otoczenia
 
