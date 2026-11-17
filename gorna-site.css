@@ -929,18 +929,11 @@
 }
 
 
-/* Hero video only: completely remove the old photo and show a dark canvas while video loads */
-.framer-3RWtH .framer-16pzmbf{
-  background-color:#101110!important;
-}
-.framer-3RWtH .framer-16pzmbf [data-framer-background-image-wrapper]{
-  background-color:#101110!important;
-  background-image:none!important;
-}
+/* Hero video: keep the original Framer cover visible until the video is actually playing. */
 .framer-3RWtH .framer-16pzmbf [data-framer-background-image-wrapper] > img{
-  display:none!important;
-  visibility:hidden!important;
-  opacity:0!important;
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
 }
 .framer-3RWtH .framer-16pzmbf .gorna-hero-video{
   opacity:0;
@@ -949,9 +942,17 @@
 .framer-3RWtH .framer-16pzmbf.gorna-hero-video-playing .gorna-hero-video{
   opacity:1!important;
 }
+.framer-3RWtH .framer-16pzmbf.gorna-hero-video-ready [data-framer-background-image-wrapper] > img{
+  opacity:0!important;
+}
 @media(prefers-reduced-motion:reduce){
   .framer-3RWtH .framer-16pzmbf .gorna-hero-video{
     display:none!important;
+  }
+  .framer-3RWtH .framer-16pzmbf [data-framer-background-image-wrapper] > img{
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
   }
 }
 
